@@ -1,0 +1,45 @@
+{
+    "name": "MaxSite",
+    "short_name": "MaxSite",
+    "description": "MaxSite - Your all-in-one tech hub with expertise in cybersecurity, web development, IoT, Android solutions, and more.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#5bbad5",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "assets/img/logo/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "assets/img/logo/icon-256x256.png",
+        "sizes": "256x256",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "assets/img/logo/icon-384x384.png",
+        "sizes": "384x384",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "assets/img/logo/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any"
+      }
+    ],
+    "related_applications": [
+      {
+        "platform": "play",
+        "url": "https://mahendraplus.github.io",
+        "id": "com.mahendraplus.maxsite"
+      }
+    ],
+    "prefer_related_applications": true
+  }
+  

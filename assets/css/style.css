@@ -1,0 +1,2358 @@
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\ 
+# Author: Mahendra Mali
+# GitHub: https://github.com/mahendraplus
+# DATE: 21-10-2024  TIME: 05:56:42
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+
+
+
+:root {
+  /*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+  # Quick Edit  -------------------------------# 
+  # Author: Mahendra Mali
+  # GitHub: https://github.com/mahendraplus
+  # DATE: 20-10-2024  TIME: 21:58:51
+  \*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+
+  --body-bg-solid: rgb(83, 98, 129);
+  --body-bg-gradient: linear-gradient(150deg,
+      hsl(49, 100%, 15%),
+      hsla(310, 76%, 15%, 0.85),
+      hsla(140, 76%, 15%, 0.85),
+      hsla(197, 80%, 15%, 0.85),
+      hsla(273, 80%, 15%, 0.85));
+  --main-border-gradient: linear-gradient(to right, hsla(212, 100%, 50%, 0), hsla(0, 0%, 25%, 0));
+  --div-gradient-bg: rgba(39, 44, 66, 0.397);
+  --menu-gradient: linear-gradient(to right, hsl(46, 78%, 56%), hsl(337, 100%, 64%));
+  --profile-gradient-bg: linear-gradient(to bottom right, hsla(0, 0%, 0%, 0.26), hsla(0, 0%, 0%, 0.349));
+  --btn-hover-gradient-bg: linear-gradient(to bottom right, hsl(320, 69%, 50%) 0%, hsla(51, 73%, 48%, 0.795) 50%);
+  --btn-hover-gradient-bg-2: linear-gradient(135deg, hsla(283, 69%, 49%, 0.158) 0%, hsla(305, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
+
+
+
+
+  --light-nav: linear-gradient(to right, hsl(46, 78%, 56%), hsl(0, 0%, 0%));
+
+
+  --article-bg: hsla(209, 34%, 15%, 0.404);
+  --note: hsla(218, 36%, 53%, 0.178);
+
+  --icon-bg-mini: hsla(0, 0%, 0%, 0);
+  --icon-mini: hsl(0, 0%, 70%);
+
+  --main-border: hsla(233, 100%, 94%, 0.123);
+
+  --scrollbar-1: rgba(83, 83, 83, 0.548);
+  --scrollbar-2: rgba(255, 255, 255, 0.623);
+
+  --vegas-gold: hwb(19 55% 11%);
+  --light-gray: hsl(0, 0%, 84%);
+  --light-gray-70: hsla(0, 7%, 89%, 0.747);
+  --bittersweet-shimmer: hsl(0, 43%, 51%);
+
+  --box-shadow-1: 0px 0px 15px hsla(0, 0%, 0%, 0.267);
+  --box-shadow-2: 0 16px 30px hsla(256, 33%, 18%, 0);
+  --box-shadow-3: 0 16px 40px hsla(0, 45%, 55%, 0);
+  --box-shadow-4: 0 25px 50px hsl(0, 68%, 61%);
+  --box-shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+
+  --font-color-1: hsl(0, 0%, 99%);
+  --font-color-2: hsl(0, 0%, 87%);
+  --ff-poppins: 'Poppins', sans-serif;
+  --font-size-1: 24px;
+  --font-size-2: 18px;
+  --font-size-3: 15px;
+  --font-size-4: 16px;
+  --font-size-5: 15px;
+  --font-size-6: 14px;
+  --font-size-7: 13px;
+  --font-size-8: 11px;
+  --font-size-9: 10px;
+  --font-weight-300: 300;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease-in-out;
+
+  --avatar-box--animation-position: 0px;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+# Author: Mahendra Mali
+# GitHub: https://github.com/mahendraplus
+# DATE: 22-10-2024  TIME: 03:35:08
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+ion-icon,
+a,
+button,
+time,
+span {
+  display: block;
+}
+
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  background: none;
+  font: inherit;
+}
+
+::selection {
+  background: var(--icon-mini);
+  color: var(--body-bg);
+}
+
+:focus {
+  outline-color: var(--icon-mini);
+}
+
+html {
+  font-family: var(--ff-poppins);
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+
+  background: var(--body-bg-solid);
+
+  background-size: cover;
+  transition: background 0.3s ease-in-out;
+
+}
+
+
+.video-bg {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+
+
+}
+
+.video-bg video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  filter: blur(2px);
+}
+
+
+.sidebar,
+article {
+  background: var(--article-bg);
+  border: 0px solid var(--main-border);
+  border-radius: 30px;
+  padding: 15px;
+  box-shadow: var(--box-shadow-1);
+  z-index: 1;
+
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background: var(--main-border);
+  margin: 16px 0;
+}
+
+.icon-box {
+  position: relative;
+  background: var(--main-border-gradient);
+  width: 30px;
+  height: 30px;
+  border-radius: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: var(--icon-mini);
+  box-shadow: var(--box-shadow-1);
+  z-index: 1;
+}
+
+.icon-box::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--icon-bg-mini);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.icon-box ion-icon {
+  --ionicon-stroke-width: 35px;
+}
+
+article {
+  display: none;
+}
+
+article.active {
+  display: block;
+  animation: fade 0.5s ease backwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.h2,
+.h3,
+.h4,
+.h5 {
+  color: var(--font-color-2);
+  text-transform: capitalize;
+}
+
+.h2 {
+  font-size: var(--font-size-1);
+}
+
+.h3 {
+  font-size: var(--font-size-2);
+}
+
+.h4 {
+  font-size: var(--font-size-4);
+}
+
+.h5 {
+  font-size: var(--font-size-7);
+  font-weight: var(--font-weight-500);
+}
+
+.article-title {
+  position: relative;
+  padding-bottom: 7px;
+}
+
+.article-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background: var(--menu-gradient);
+  border-radius: 3px;
+}
+
+.has-scrollbar::-webkit-scrollbar {
+  height: 23px;
+
+
+}
+
+.has-scrollbar::-webkit-scrollbar-track {
+  background: var(--article-bg);
+  border-radius: 10px;
+
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--body-bg-solid);
+  border-radius: 10px;
+
+}
+
+.has-scrollbar::-webkit-scrollbar-button {
+  width: 10px;
+  
+}
+
+.content-card {
+  position: relative;
+  background: var(--main-border-gradient);
+  padding: 15px;
+  padding-top: 45px;
+  border-radius: 14px;
+  box-shadow: var(--box-shadow-2);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.content-card::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--div-gradient-bg);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+
+main {
+  margin: 15px 12px;
+  margin-bottom: 75px;
+  min-width: 259px;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+# SIDEBAR 
+# Author: Mahendra Mali
+# GitHub: https://github.com/mahendraplus
+# DATE: 17-10-2024  TIME: 00:29:29
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+.sidebar {
+  margin-bottom: 15px;
+  max-height: 112px;
+  overflow: hidden;
+  transition: var(--transition-2);
+}
+
+.sidebar.active {
+  max-height: 405px;
+}
+
+.sidebar-info {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+# ------- Profile Border Animations  --------#
+# -------------------------------------------#
+# -------Author: Mahendra Mali---------------#
+# GitHub: https://github.com/mahendraplus ---#
+# ---- DATE: 18-10-2024  TIME: 23:02:06 -----#
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+
+.avatar-box {
+  position: relative;
+  border-radius: 30px;
+  display: inline-block;
+  background: transparent;
+  z-index: 1;
+}
+
+.avatar-box::before {
+  content: '';
+  position: absolute;
+  top: var(--avatar-box--animation-position);
+  left: var(--avatar-box--animation-position);
+  right: var(--avatar-box--animation-position);
+  bottom: var(--avatar-box--animation-position);
+  border-radius: 100%;
+  background-image: conic-gradient(rgba(0, 0, 0, 0),
+      rgb(255, 0, 98),
+      rgb(0, 26, 255),
+      rgb(255, 153, 0));
+  /*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+    # wow..... 
+    # Author: Mahendra Mali
+    # GitHub: https://github.com/mahendraplus
+    # DATE: 19-10-2024  TIME: 05:57:57
+    \*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+  background-size: var(--random-bg-size), 90px 90px;
+  animation: rotateGlow 7s linear infinite, colorShift 3s ease-in-out infinite;
+  filter: blur(40px);
+  z-index: -1;
+}
+
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes colorShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.avatar-box img {
+  border-radius: 100%;
+  opacity: 0.8;
+
+}
+
+.avatar-box:hover img {
+  transform: scale(1.03);
+  
+
+
+}
+
+
+.info-content .name {
+  color: var(--font-color-2);
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-500);
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  padding-left: 3px;
+}
+
+.info-content .title {
+  color: var(--font-color-1);
+  background: var(--note);
+  font-size: var(--font-size-8);
+  font-weight: var(--font-weight-300);
+  width: max-content;
+  padding: 3px 12px;
+  border-radius: 8px;
+}
+
+.info_more-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  border-radius: 0 15px;
+  font-size: 13px;
+  color: var(--body-bg-solid);
+  background: rgb(12 17 41 / 40%);
+  padding: 10px;
+  box-shadow: var(--box-shadow-2);
+  transition: var(--transition-1);
+  z-index: 1;
+}
+
+.info_more-btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--div-gradient-bg);
+  transition: var(--transition-1);
+  z-index: -1;
+}
+
+.info_more-btn:hover,
+.info_more-btn:focus {
+  color: var(--icon-mini);
+ 
+}
+
+.info_more-btn:hover::before,
+.info_more-btn:focus::before {
+  color: var(--font-color-1);
+  
+
+}
+
+.info_more-btn span {
+  display: none;
+  
+}
+
+.sidebar-info_more {
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-2);
+}
+
+.sidebar.active .sidebar-info_more {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contacts-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.contact-item {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-info {
+  max-width: calc(100% - 46px);
+  width: calc(100% - 46px);
+}
+
+.contact-title {
+  color: var(--light-gray-70);
+  font-size: var(--font-size-8);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.contact-info :is(.contact-link, time, address) {
+  color: var(--font-color-2);
+  font-size: var(--font-size-7);
+}
+
+.contact-info address {
+  font-style: normal;
+}
+
+.social-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 4px;
+  padding-left: 7px;
+}
+
+.social-item .social-link {
+  color: var(--light-gray-70);
+  font-size: 18px;
+}
+
+.social-item .social-link:hover {
+  color: var(--light-gray);
+}
+
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+# NAVBAR 
+# Author: Mahendra Mali
+# GitHub: https://github.com/mahendraplus
+# DATE: 17-10-2024  TIME: 00:30:01
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: hsla(0, 0%, 0%, 0.281);
+  backdrop-filter: blur(20px);
+  border: 5px solid var(--main-border);
+  border-radius: 100px 100px 100px 100px;
+  box-shadow: var(--box-shadow-2);
+  z-index: 5;
+}
+
+.navbar-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px;
+}
+
+.navbar-link {
+  color: var(--light-gray);
+  font-size: var(--font-size-7);
+  padding: 20px 10px;
+  transition: color var(--transition-1);
+}
+
+.navbar-link:hover,
+.navbar-link:focus {
+  background: linear-gradient(to right, hsl(46, 78%, 56%), hsl(337, 100%, 64%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  transform: scale(1.2);
+}
+
+.navbar-link.active {
+  background: linear-gradient(to right, hsl(46, 78%, 56%), hsl(337, 100%, 64%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+# ABOUT 
+# Author: Mahendra Mali
+# GitHub: https://github.com/mahendraplus
+# DATE: 17-10-2024  TIME: 00:30:29
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+.about .article-title {
+  margin-bottom: 15px;
+}
+
+.about-text {
+  color: var(--light-gray);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-300);
+  line-height: 1.6;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+.service {
+  margin-bottom: 35px;
+}
+
+.service-title {
+  margin-bottom: 20px;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.service-item {
+  position: relative;
+  background: var(--main-border-gradient);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--box-shadow-2);
+  z-index: 1;
+}
+
+.service-item:hover {
+  transform: scale(1.01);
+
+
+}
+
+.service-item img {
+  transform: scale(1) rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-item:hover img {
+  transform: scale(1.2) rotate(15deg);
+
+}
+
+.service-item::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--div-gradient-bg);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.service-icon-box {
+  margin-bottom: 10px;
+}
+
+.service-icon-box img {
+  margin: auto;
+}
+
+.service-content-box {
+  text-align: center;
+}
+
+.service-item-title {
+  margin-bottom: 7px;
+}
+
+.service-item-text {
+  color: var(--light-gray);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-3);
+  line-height: 1.6;
+}
+
+.testimonials {
+  margin-bottom: 30px;
+}
+
+.testimonials-title {
+  margin-bottom: 20px;
+}
+
+.testimonials-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 0 -15px;
+  padding: 25px 15px;
+  padding-bottom: 35px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+ 
+}
+
+.testimonials-item {
+  min-width: 100%;
+  scroll-snap-align: center;
+  /* animation: reverseScroll s linear infinite alternate; */
+
+}
+
+.testimonials-avatar-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(15px, -25px);
+  background: var(--profile-gradient-bg);
+  border-radius: 14px;
+  box-shadow: var(--box-shadow-1);
+}
+
+.testimonials-item-title {
+  margin-bottom: 7px;
+}
+
+.testimonials-text {
+  color: var(--light-gray);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-300);
+  line-height: 1.6;
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  z-index: 20;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal-container::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-container.active {
+  pointer-events: all;
+  visibility: visible;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: hsl(0, 0%, 5%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.overlay.active {
+  opacity: 0.9;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.testimonials-modal {
+  background: var(--div-gradient-bg);
+  position: relative;
+  padding: 10px;
+  margin: 15px 15px;
+  border: 1px solid var(--main-border);
+  border-radius: 14px;
+  box-shadow: var(--box-shadow-5);
+  transform: scale(1.2);
+  opacity: 0;
+  transition: var(--transition-1);
+  z-index: 2;
+}
+
+
+.modal-container.active .testimonials-modal {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--note);
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-color-2);
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  opacity: 1;
+}
+
+.modal-close-btn ion-icon {
+  --ionicon-stroke-width: 100px;
+}
+
+.modal-avatar-box {
+  background: var(--profile-gradient-bg);
+  width: max-content;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  box-shadow: var(--box-shadow-2);
+}
+
+.modal-img-wrapper>img {
+  display: none;
+}
+
+.modal-title {
+  margin-bottom: 4px;
+}
+
+.modal-content time {
+  font-size: var(--font-size-6);
+  color: var(--light-gray-70);
+  font-weight: var(--font-weight-300);
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  color: var(--light-gray);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-300);
+  line-height: 1.6;
+}
+
+.testimonials-modal img {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+
+.testimonials-modal img:hover {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 10px 1px rgb(155, 155, 155);
+}
+
+
+
+.clients {
+  margin-bottom: 15px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 0 -15px;
+  padding: 25px;
+  padding-bottom: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 25px;
+
+}
+
+.clients-item {
+  min-width: 50%;
+  scroll-snap-align: start;
+  /* animation: reverseScroll 5s linear infinite alternate; */
+
+}
+
+
+@keyframes reverseScroll {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+
+  100% {
+    transform: scale(1) translateX(-100%);
+  }
+}
+
+.cli-img {
+  width: 80%;
+  height: 80px;
+  filter: saturate(0%);
+  transition: var(--transition-1);
+  transform: scale(1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.cli-img:hover {
+  filter: saturate(100%);
+
+}
+
+
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+# RESUME 
+# Author: Mahendra Mali
+# GitHub: https://github.com/mahendraplus
+# DATE: 17-10-2024  TIME: 00:31:57
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+.article-title {
+  margin-bottom: 30px;
+}
+
+
+.timeline {
+  margin-bottom: 30px;
+}
+
+.timeline .title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.timeline-list {
+  font-size: var(--font-size-6);
+  margin-left: 45px;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.timeline-item-title {
+  font-size: var(--font-size-6);
+  line-height: 1.3;
+  margin-bottom: 7px;
+}
+
+.timeline-list span {
+  color: var(--vegas-gold);
+  font-weight: var(--font-weight-400);
+  line-height: 1.7;
+}
+
+.timeline-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -30px;
+  width: 1px;
+  height: calc(100% + 50px);
+  background: var(--main-border);
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -33px;
+  height: 6px;
+  width: 6px;
+  background: var(--menu-gradient);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--main-border);
+}
+
+.timeline-text {
+  color: var(--light-gray);
+  font-weight: var(--font-weight-300);
+  line-height: 1.6;
+}
+
+
+.skills-title {
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  padding: 20px;
+}
+
+
+.skills-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.skill .title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.skill .title-wrapper data {
+  color: var(--light-gray);
+  font-size: var(--font-size-7);
+  font-weight: var(--font-weight-300);
+}
+
+.skill-progress-bg {
+  background: var(--article-bg);
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+}
+
+.skill-progress-fill {
+  background: var(--body-bg-solid);
+  height: 100%;
+  border-radius: inherit;
+}
+
+
+
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+# MY PROJECTS 
+# Author: Mahendra Mali
+# GitHub: https://github.com/mahendraplus
+# DATE: 17-10-2024  TIME: 00:32:47
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+.filter-list {
+  display: none;
+
+}
+
+
+.filter-select-box {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.filter-select {
+  background: var(--body-bg-solid);
+  color: var(--light-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--main-border);
+  border-radius: 20px;
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-300);
+}
+
+.filter-select.active .select-icon {
+  transform: rotate(0.5turn);
+}
+
+.select-list {
+  background: var(--body-bg-solid);
+  position: absolute;
+  top: calc(100% + 6px);
+  width: 100%;
+  padding: 6px;
+  border: 0px solid var(--main-border);
+  border-radius: 20px;
+  z-index: 2;
+  opacity: 0;
+  visibility: visible;
+  pointer-events: none;
+  transition: 0.15s ease-in-out;
+  box-shadow: 0px 0px  10px 1px rgba(0, 0, 0, 0.247);
+
+
+}
+
+.filter-select.active+.select-list {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+
+.select-item button {
+  background: var(--article-bg);
+  color: var(--light-gray);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-300);
+  text-transform: capitalize;
+  width: 97%;
+  padding: 10px 10px;
+  border-radius: 15px;
+  margin: 5PX;
+  
+}
+
+.select-item button:hover {
+  --article-bg: hsl(240, 2%, 20%);
+  transform: scale(1.01);
+
+}
+
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.project-item {
+  display: none;
+  padding: 0px;
+
+}
+
+
+.project-item.active {
+  display: block;
+  animation: scaleUp 0.25s ease forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.project-item>a {
+  width: 100%;
+  background: var(--div-gradient-bg);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.modal-container.active .testimonials-modal {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.project-item>a:hover {
+  transform: scale(1.03);
+
+}
+
+.project-img {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+
+  opacity: 0.7;
+
+}
+
+.project-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.project-item>a:hover .project-img::before {
+  background: hsla(0, 0%, 0%, 0.5);
+}
+
+.project-item-icon-box {
+  --scale: 0.8;
+
+  background: var(--main-border);
+  color: var(--icon-mini);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(var(--scale));
+  font-size: 20px;
+  padding: 18px;
+  border-radius: 12px;
+  opacity: 0;
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.project-item>a:hover .project-item-icon-box {
+  --scale: 1;
+  opacity: 1;
+}
+
+.project-item-icon-box ion-icon {
+  --ionicon-stroke-width: 50px;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-1);
+
+
+}
+
+.project-item>a:hover img {
+  transform: scale(1.05);
+}
+
+.project-title,
+.project-category {
+  margin-left: 10px;
+}
+
+.project-title {
+  color: var(--font-color-2);
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-400);
+  text-transform: capitalize;
+  line-height: 1.3;
+}
+
+.project-category {
+  color: var(--light-gray-70);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-300);
+  display: none;
+}
+
+.count-date-box {
+  display: flex;
+  /* Enables flexbox layout */
+  justify-content: space-between;
+  /* Ensures children are spaced evenly */
+  align-items: center;
+  /* Aligns items vertically center */
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+}
+
+.project-count {
+  width: fit-content;
+  margin-inline: 10px;
+  padding: 3px 10px 3px 10px;
+  background: var(--div-gradient-bg);
+  /* Button background color */
+  color: var(--light-gray-70);
+  font-size: var(--font-size-9);
+  border-radius: 80px;
+  /* Rounded corners for the toggle */
+}
+
+.project-date {
+  width: fit-content;
+  margin-inline: 10px;
+  padding: 3px 10px 3px 10px;
+  background: var(--div-gradient-bg);
+  /* Button background color */
+  color: var(--light-gray-70);
+  font-size: var(--font-size-9);
+  border-radius: 80px;
+  /* Rounded corners for the toggle */
+
+}
+
+
+
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+# BLOG 
+# Author: Mahendra Mali
+# GitHub: https://github.com/mahendraplus
+# DATE: 17-10-2024  TIME: 00:36:09
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+
+#blog-post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  /* Adjust this as needed */
+}
+
+.blog-post-item {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.blog-posts {
+  margin-bottom: 10px;
+
+}
+
+.blog-posts-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+
+
+.blog-post-item>a {
+  position: relative;
+  background: var(--div-gradient-bg);
+  height: 100%;
+  box-shadow: var(--box-shadow-2);
+  border-radius: 25px;
+  z-index: 1;
+  margin-bottom: 5px;
+}
+
+.blog-post-item>a:hover {
+
+  transform: scale(1.01);
+  background: var(--div-gradient-bg);
+}
+
+.blog-post-item>a::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--div-gradient-bg);
+  z-index: -1;
+
+}
+
+.blog-banner-box {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  /* This ensures a 16:9 aspect ratio (9/16 * 100) */
+  overflow: hidden;
+  /* Prevent the image from overflowing */
+
+}
+
+.blog-banner-box img {
+  filter: brightness(0.8);
+  padding: 11px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures the image covers the entire container */
+  object-position: center;
+  /* Center the image */
+  transition: var(--transition-1);
+  /* Smooth transition effect */
+  border-radius: 30px;
+  /* Ensures the image matches the parent radius */
+}
+
+.blog-post-item>a:hover .blog-banner-box img {
+  transform: scale(1.01);
+  filter: contrast(1.1) brightness(1.1) saturate(1) sepia(0);
+  image-rendering: optimizeQuality;
+}
+
+.blog-content {
+  padding: 15px;
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 10px;
+}
+
+.blog-meta :is(.blog-category, time) {
+  color: var(--light-gray-70);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-300);
+}
+
+.blog-meta .dot {
+  background: var(--menu-gradient);
+  width: 7px;
+  height: 7px;
+  border-radius: 4px;
+
+}
+
+.blog-item-title {
+  margin-bottom: 10px;
+  line-height: 1.3;
+  transition: var(--transition-1);
+}
+
+.blog-post-item>a:hover .blog-item-title {
+  color: var(--icon-mini);
+
+
+}
+
+.blog-text {
+  color: var(--light-gray);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-300);
+  line-height: 1.6;
+}
+
+
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+# CONTACT ME 
+# Author: Mahendra Mali
+# GitHub: https://github.com/mahendraplus
+# DATE: 17-10-2024  TIME: 00:37:22
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+.mapbox {
+  position: relative;
+  height: 250px;
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  border: 0px solid var(--main-border);
+  overflow: hidden;
+  opacity: 1;
+  box-shadow: 0px 0px 7px 7px rgba(0, 0, 0, 0.075);
+}
+
+.mapbox figure {
+  height: 100%;
+}
+
+.mapbox iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: brightness(0.6) contrast(1.3) saturate(0.7);
+}
+
+.contact-form {
+  margin-bottom: 10px;
+}
+
+.form-title {
+  margin-bottom: 20px;
+}
+
+.input-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.form-input {
+  color: var(--font-color-2);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-400);
+  padding: 13px 20px;
+  border: 1px solid var(--main-border);
+  border-radius: 20px;
+  outline: none;
+}
+
+.form-input::placeholder {
+  font-weight: var(--font-weight-500);
+}
+
+.form-input:focus {
+  border-color: var(--icon-mini);
+}
+
+textarea.form-input {
+  min-height: 100px;
+  height: 120px;
+  max-height: 200px;
+  resize: vertical;
+  margin-bottom: 25px;
+}
+
+textarea.form-input::-webkit-resizer {
+  display: none;
+}
+
+.form-input:focus:invalid {
+  border-color: var(--bittersweet-shimmer);
+}
+
+
+input[type="file"]::file-selector-button {
+  background: var(--article-bg);
+  color: var(--light-gray);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  opacity: 1;
+  box-shadow: var(--box-shadow-3);
+  transition: var(--transition-1);
+  font-weight: var(--font-weight-500);
+  margin-right: 20px;
+}
+/* 
+input[type="file"]::file-selector-button:hover {
+ 
+} */
+
+
+
+.form-btn {
+  position: relative;
+  width: 100%;
+  background: var(--body-bg-solid);
+  color: var(--icon-mini);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border-radius: 20px;
+  font-size: var(--font-size-2);
+  text-transform: capitalize;
+  box-shadow: var(--box-shadow-3);
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.form-btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--div-gradient-bg);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.form-btn ion-icon {
+  font-size: var(--font-size-2);
+}
+
+.form-btn:hover {
+  background: var(--article-bg);
+  color: rgba(255, 255, 255, 0.877);
+}
+
+.form-btn:hover::before {
+  background: rgba(86, 204, 86, 0.568);
+ 
+}
+
+
+.form-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-btn:disabled:hover {
+  background: var(--article-bg);
+}
+
+.form-btn:disabled:hover::before {
+  background: rgba(185, 44, 44, 0.795);
+}
+
+
+.contact-form-sending {
+  color: var(--font-color-1);
+  font-size: var(--font-size-8);
+  display: none;
+  text-align: center;
+  padding: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.contact-form-sent h3 {
+  color: var(--font-color-2);
+  font-size: var(--font-size-3);
+}
+
+
+
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+# FOR > 450px SCREEN
+# Author: Mahendra Mali
+# GitHub: https://github.com/mahendraplus
+# DATE: 17-10-2024  TIME: 00:38:03
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 450px) {
+
+  .clients-item {
+    min-width: calc(33.33% - 10px);
+  }
+
+
+  .project-img,
+  .blog-banner-box {
+    height: auto;
+  }
+
+}
+
+
+@media (min-width: 580px) {
+
+
+  :root {
+
+    --font-size-1: 32px;
+    --font-size-2: 24px;
+    --font-size-3: 26px;
+    --font-size-4: 18px;
+    --font-size-6: 15px;
+    --font-size-7: 15px;
+    --font-size-8: 12px;
+
+  }
+
+  .sidebar,
+  article {
+    width: 520px;
+    margin-inline: auto;
+    padding: 30px;
+  }
+
+  .article-title {
+    font-weight: var(--font-weight-600);
+    padding-bottom: 15px;
+  }
+
+  .article-title::after {
+    width: 40px;
+    height: 5px;
+  }
+
+  .icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    font-size: 18px;
+  }
+
+
+  main {
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+
+
+
+  .sidebar {
+    max-height: 180px;
+    margin-bottom: 30px;
+  }
+
+  .sidebar.active {
+    max-height: 584px;
+  }
+
+  .sidebar-info {
+    gap: 25px;
+  }
+
+  .avatar-box {
+    border-radius: 30px;
+  }
+
+  .avatar-box img {
+    width: 120px;
+  }
+
+  .info-content .name {
+    margin-bottom: 15px;
+  }
+
+  .info-content .title {
+    padding: 5px 18px;
+  }
+
+  .info_more-btn {
+    top: -30px;
+    right: -30px;
+    padding: 10px 15px;
+  }
+
+  .info_more-btn span {
+    display: block;
+    font-size: var(--font-size-8);
+  }
+
+  .info_more-btn ion-icon {
+    display: none;
+  }
+
+  .separator {
+    margin: 32px 0;
+  }
+
+  .contacts-list {
+    gap: 20px;
+  }
+
+  .contact-info {
+    max-width: calc(100% - 64px);
+    width: calc(100% - 64px);
+  }
+
+  .navbar {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .navbar-list {
+    gap: 20px;
+  }
+
+  .navbar-link {
+    --font-size-8: 14px;
+  }
+
+
+  .about .article-title {
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    margin-bottom: 40px;
+  }
+
+
+  .service-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 30px;
+  }
+
+  .service-icon-box {
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+
+  .service-content-box {
+    text-align: left;
+  }
+
+
+
+  .testimonials-title {
+    margin-bottom: 25px;
+  }
+
+  .testimonials-list {
+    gap: 30px;
+    margin: 0 -30px;
+    padding: 30px;
+    padding-bottom: 35px;
+  }
+
+  .content-card {
+    padding: 30px;
+    padding-top: 25px;
+  }
+
+  .testimonials-avatar-box {
+    transform: translate(30px, -30px);
+    border-radius: 20px;
+  }
+
+  .testimonials-avatar-box img {
+    width: 80px;
+  }
+
+  .testimonials-item-title {
+    margin-bottom: 10px;
+    margin-left: 95px;
+  }
+
+  .testimonials-text {
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+  }
+
+
+  .modal-container {
+    padding: 20px;
+  }
+
+  .testimonials-modal {
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 25px;
+    padding: 30px;
+    border-radius: 20px;
+  }
+
+  .modal-img-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-avatar-box {
+    border-radius: 18px;
+    margin-bottom: 0;
+  }
+
+  .modal-avatar-box img {
+    width: 65px;
+  }
+
+  .modal-img-wrapper>img {
+    display: block;
+    flex-grow: 1;
+    width: 35px;
+  }
+
+  .clients-list {
+    gap: 50px;
+    margin: 0 -30px;
+    padding: 45px;
+    scroll-padding-inline: 45px;
+  }
+
+  .clients-item {
+    min-width: calc(33.33% - 35px);
+  }
+
+  .timeline-list {
+    margin-left: 65px;
+  }
+
+  .timeline-item:not(:last-child)::before {
+    left: -40px;
+  }
+
+  .timeline-item::after {
+    height: 8px;
+    width: 8px;
+    left: -43px;
+  }
+
+  .skills-item:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+
+  .project-img,
+  .blog-banner-box {
+    border-radius: 16px;
+  }
+
+  .blog-posts-list {
+    gap: 30px;
+
+  }
+
+  .blog-content {
+    padding: 25px;
+  }
+
+
+  .mapbox {
+    height: 380px;
+    border-radius: 18px;
+  }
+
+  .input-wrapper {
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .form-input {
+    padding: 15px 20px;
+  }
+
+  textarea.form-input {
+    margin-bottom: 30px;
+  }
+
+  .form-btn {
+    --font-size-6: 16px;
+    padding: 16px 20px;
+  }
+
+  .form-btn ion-icon {
+    font-size: 18px;
+  }
+
+}
+
+
+
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+# FOR > 768px SCREEN 
+# Author: Mahendra Mali
+# GitHub: https://github.com/mahendraplus
+# DATE: 17-10-2024  TIME: 00:40:20
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 768px) {
+
+  .sidebar,
+  article {
+    width: 700px;
+  }
+
+  .has-scrollbar::-webkit-scrollbar-button {
+    width: 100px;
+  }
+
+
+  .contacts-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 15px;
+  }
+
+
+  .navbar-link {
+    --font-size-8: 15px;
+  }
+
+
+  .testimonials-modal {
+    gap: 35px;
+    max-width: 60%;
+  }
+
+  .modal-avatar-box img {
+    width: 80px;
+  }
+
+  .article-title {
+    padding-bottom: 20px;
+  }
+
+  .filter-select-box {
+    display: none;
+  }
+
+  .filter-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    padding-left: 5px;
+    margin-bottom: 30px;
+  }
+
+  .filter-item button {
+    color: var(--light-gray);
+    font-size: var(--font-size-5);
+    transition: var(--transition-1);
+  }
+
+  .filter-item button:hover {
+    color: var(--light-gray-70);
+  }
+
+  .filter-item button.active {
+    color: var(--icon-mini);
+  }
+
+
+  .project-list,
+  .blog-posts-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .input-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-btn {
+    width: max-content;
+    margin-left: auto;
+  }
+
+}
+
+
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+# FOR > 1024px SCREEN 
+# Author: Mahendra Mali
+# GitHub: https://github.com/mahendraplus
+# DATE: 17-10-2024  TIME: 00:41:13
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 1024px) {
+
+  :root {
+
+    --box-shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
+    --box-shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
+    --box-shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
+
+  }
+
+  .sidebar,
+  article {
+    width: 950px;
+    box-shadow: var(--box-shadow-5);
+  }
+
+  main {
+    margin-bottom: 60px;
+  }
+
+  .main-content {
+    position: relative;
+    width: max-content;
+    margin: auto;
+  }
+
+
+  .navbar {
+    position: absolute;
+    bottom: auto;
+    top: 0;
+    left: auto;
+    right: 0;
+    width: max-content;
+    border-radius: 0 20px;
+    padding: 0 20px;
+    box-shadow: none;
+  }
+
+  .navbar-list {
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .navbar-link {
+    font-weight: var(--font-weight-500);
+  }
+
+  .service-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 25px;
+  }
+
+  .testimonials-item {
+    min-width: calc(50% - 15px);
+  }
+
+
+  .clients-item {
+    min-width: calc(25% - 38px);
+  }
+
+
+  .project-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+  .blog-banner-box {
+    height: 230px;
+  }
+
+}
+
+
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+# FOR > 1250px SCREEN 
+# Author: Mahendra Mali
+# GitHub: https://github.com/mahendraplus
+# DATE: 17-10-2024  TIME: 00:42:18
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 1250px) {
+
+
+
+
+  /*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+  # Scrollbar #################################
+  # Author: Mahendra Mali
+  # GitHub: https://github.com/mahendraplus
+  # DATE: 22-10-2024  TIME: 05:25:39
+  \*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+
+  body::-webkit-scrollbar {
+    width: 15px;
+    display: block;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    border: 2px solid var(--main-border);
+    background: var(--article-bg);
+    border-radius: 20px;
+    box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+      inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background: hsla(0, 0%, 100%, 0.15);
+  }
+
+  body::-webkit-scrollbar-button {
+    height: 15px;
+    background-color: var(--article-bg);
+    border-radius: 100%;
+    border: 2px solid var(--main-border);
+  }
+
+  .sidebar,
+  article {
+    width: auto;
+  }
+
+  article {
+    min-height: 100%;
+  }
+
+  main {
+    max-width: 1200px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+  }
+
+  .main-content {
+    min-width: 75%;
+    width: 75%;
+    margin: 0;
+  }
+
+
+  .sidebar {
+    position: sticky;
+    top: 60px;
+    max-height: max-content;
+    height: 100%;
+    margin-bottom: 0;
+    padding-top: 60px;
+    z-index: 1;
+  }
+
+  .sidebar-info {
+    flex-direction: column;
+  }
+
+  .avatar-box img {
+    width: 150px;
+  }
+
+  .info-content .name {
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .info-content .title {
+    margin: auto;
+  }
+
+  .info_more-btn {
+    display: none;
+  }
+
+  .sidebar-info_more {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .contacts-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info :is(.contact-link) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .contact-info :is(.contact-link, time, address) {
+    --font-size-7: 14px;
+    font-weight: var(--font-weight-300);
+  }
+
+  .separator:last-of-type {
+    margin: 15px 0;
+    opacity: 0;
+  }
+
+  .social-list {
+    justify-content: center;
+  }
+
+
+  .timeline-text {
+    max-width: 700px;
+  }
+
+}
+
+
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+# GREEEN TICK ANIMATED<<<<<<<<<<<<<< 
+# Author: Mahendra Mali
+# GitHub: https://github.com/mahendraplus
+# DATE: 21-10-2024  TIME: 21:48:20
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+
+.success-animation {
+
+  margin: 30px auto;
+  display: none;
+}
+
+.checkmark {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #4bb71b;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #4bb71b;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+  position: relative;
+  top: 5px;
+  right: 5px;
+  margin: 0 auto;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #4bb71b;
+  fill: #fff;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+
+  0%,
+  100% {
+    transform: none;
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #4bb71b;
+  }
+}
+
+
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+# Loading... >>><<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+# Author: Mahendra Mali
+# GitHub: https://github.com/mahendraplus
+# DATE: 22-10-2024  TIME: 03:15:25
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+
+
+.loader {
+  width: 100px;
+  aspect-ratio: 1;
+  display: grid;
+  padding: 20px;
+}
+
+.loader::before,
+.loader::after {
+
+  content: "";
+  grid-area: 1/1;
+  --c: no-repeat radial-gradient(farthest-side, hsla(0, 0%, 100%, 0.562) 92%, #00000000);
+  background:
+    var(--c) 50% 0,
+    var(--c) 50% 100%,
+    var(--c) 100% 50%,
+    var(--c) 0 50%;
+  background-size: 12px 12px;
+  animation: l12 1s infinite;
+}
+
+.loader::before {
+
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear
+}
+
+@keyframes l12 {
+  100% {
+    transform: rotate(.5turn)
+  }
+}
