@@ -1,11 +1,11 @@
 {
-    "name": "MaxSite",
-    "short_name": "MaxSite",
-    "description": "MaxSite - Your gateway to all things tech, from cybersecurity and web development to IoT and Android solutions.",
+    "name": "Maxzone",
+    "short_name": "Maxzone",
+    "description": "Maxzone - Your gateway to all things tech, from cybersecurity and web development to IoT and Android solutions.",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#FFFFFF",
-    "theme_color": "#5bbad5",
+    "background_color": "#536281",
+    "theme_color": "#536281",
     "icons": [
       {
         "src": "assets/img/logo/icon-192x192.png",
