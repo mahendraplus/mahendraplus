@@ -6,6 +6,8 @@
 
 
 
+
+
 :root {
   /*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
   # Quick Edit  -------------------------------# 
@@ -58,7 +60,7 @@
 
   --font-color-1: hsl(0, 0%, 99%);
   --font-color-2: hsl(0, 0%, 87%);
-  --ff-poppins: 'Poppins', sans-serif;
+  --ff-poppins: "Merienda", system-ui;
   --font-size-1: 24px;
   --font-size-2: 18px;
   --font-size-3: 15px;
@@ -141,9 +143,7 @@ html {
 }
 
 body {
-
   background: var(--body-bg-solid);
-
   background-size: cover;
   transition: background 0.3s ease-in-out;
 
@@ -297,7 +297,7 @@ article.active {
 
 .has-scrollbar::-webkit-scrollbar-button {
   width: 10px;
-  
+
 }
 
 .content-card {
@@ -424,7 +424,7 @@ main {
 
 .avatar-box:hover img {
   transform: scale(1.03);
-  
+
 
 
 }
@@ -476,19 +476,19 @@ main {
 .info_more-btn:hover,
 .info_more-btn:focus {
   color: var(--icon-mini);
- 
+
 }
 
 .info_more-btn:hover::before,
 .info_more-btn:focus::before {
   color: var(--font-color-1);
-  
+
 
 }
 
 .info_more-btn span {
   display: none;
-  
+
 }
 
 .sidebar-info_more {
@@ -552,6 +552,22 @@ main {
 
 .social-item .social-link:hover {
   color: var(--light-gray);
+}
+
+/*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+# Zzz.....
+# Author: Mahendra Mali
+# GitHub: https://github.com/mahendraplus
+# DATE: 24-10-2024  TIME: 02:21:21
+\*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+.visitor-count {
+  color: var(--font-color-2);
+  font-size: 11px;
+  padding: 2px;
+  width: auto;
+  height: auto;
+  padding-left: 7px;
+  text-align: center;
 }
 
 /*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
@@ -719,7 +735,7 @@ main {
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
- 
+
 }
 
 .testimonials-item {
@@ -1109,7 +1125,7 @@ main {
   visibility: visible;
   pointer-events: none;
   transition: 0.15s ease-in-out;
-  box-shadow: 0px 0px  10px 1px rgba(0, 0, 0, 0.247);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.247);
 
 
 }
@@ -1131,7 +1147,7 @@ main {
   padding: 10px 10px;
   border-radius: 15px;
   margin: 5PX;
-  
+
 }
 
 .select-item button:hover {
@@ -1473,8 +1489,8 @@ main {
 .mapbox iframe {
   width: 100%;
   height: 100%;
-  border: none;
-  filter: brightness(0.6) contrast(1.3) saturate(0.7);
+  border: 1px solid wheat;
+
 }
 
 .contact-form {
@@ -1540,6 +1556,7 @@ input[type="file"]::file-selector-button {
   font-weight: var(--font-weight-500);
   margin-right: 20px;
 }
+
 /* 
 input[type="file"]::file-selector-button:hover {
  
@@ -1586,7 +1603,7 @@ input[type="file"]::file-selector-button:hover {
 
 .form-btn:hover::before {
   background: rgba(86, 204, 86, 0.568);
- 
+
 }
 
 
