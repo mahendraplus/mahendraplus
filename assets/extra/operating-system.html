@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating System Quick</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-title {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .topic {
+            margin-bottom: 20px;
+        }
+
+        .topic-title {
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+            transition: padding-left 0.3s ease;
+        }
+
+        li:before {
+            content: "•";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+
+        li:hover {
+            padding-left: 25px;
+            color: #2c3e50;
+        }
+
+        .nav-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-top:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            .section-title {
+                font-size: 1.3em;
+            }
+
+            .topic-title {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 15px;
+            }
+
+            .section-title {
+                font-size: 1.2em;
+            }
+
+            .nav-top {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Operating System</h1>
+            <p></p>
+        </div>
+
+        <!-- Operating System Basic -->
+        <div class="section">
+            <h2 class="section-title">🔸 OPERATING SYSTEM KA BASIC</h2>
+            
+            <div class="topic">
+                <h3 class="topic-title">1. Operating System (OS) Kya Hai?</h3>
+                <ul>
+                    <li>Computer ko chalane wala main software</li>
+                    <li>Hardware aur software ke beech ka bridge</li>
+                    <li>Resources ko manage karne wala system</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3 class="topic-title">2. OS ke Types</h3>
+                <ul>
+                    <li>Single User OS (jaise Windows)</li>
+                    <li>Multi User OS (jaise Linux)</li>
+                    <li>Real Time OS (jaise factory machines mein)</li>
+                    <li>Batch OS (purane zamane mein use hota tha)</li>
+                    <li>Network OS (servers ke liye)</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3 class="topic-title">3. Modern OS ki Khaasiyat</h3>
+                <ul>
+                    <li>Multitasking kar sakta hai</li>
+                    <li>User friendly interface</li>
+                    <li>Security features</li>
+                    <li>Resource management</li>
+                    <li>Network support</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Process Management -->
+        <div class="section">
+            <h2 class="section-title">🔸 PROCESS MANAGEMENT</h2>
+            
+            <div class="topic">
+                <h3 class="topic-title">1. Process Kya Hai?</h3>
+                <ul>
+                    <li>Program jo execute ho raha hai</li>
+                    <li>Har process ka apna ID hota hai (PID)</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3 class="topic-title">2. Process States</h3>
+                <ul>
+                    <li>New: Process create hua hai</li>
+                    <li>Ready: CPU ke liye wait kar raha hai</li>
+                    <li>Running: CPU pe chal raha hai</li>
+                    <li>Waiting: Kisi resource ka wait kar raha hai</li>
+                    <li>Terminated: Process khatam ho gaya</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3 class="topic-title">3. Scheduling Algorithms</h3>
+                <ul>
+                    <li>FCFS: First Come First Serve</li>
+                    <li>SJF: Sabse chota kaam pehle</li>
+                    <li>Round Robin: Har process ko time slice milta hai</li>
+                    <li>Priority: Priority ke hisab se process chalta hai</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- IPC -->
+        <div class="section">
+            <h2 class="section-title">🔸 INTER PROCESS COMMUNICATION (IPC)</h2>
+            
+            <div class="topic">
+                <h3 class="topic-title">1. Critical Section</h3>
+                <ul>
+                    <li>Code ka wo hissa jo shared resources use karta hai</li>
+                    <li>Ek time pe sirf ek process access kar sakta hai</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3 class="topic-title">2. Mutual Exclusion</h3>
+                <ul>
+                    <li>Ek process critical section mein hai toh doosra nahi ja sakta</li>
+                    <li>Deadlock se bachne ke liye zaroori hai</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3 class="topic-title">3. Semaphores</h3>
+                <ul>
+                    <li>Binary Semaphore: Traffic signal ki tarah (0 ya 1)</li>
+                    <li>Counting Semaphore: Multiple resources ke liye</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Deadlock -->
+        <div class="section">
+            <h2 class="section-title">🔸 DEADLOCK</h2>
+            
+            <div class="topic">
+                <h3 class="topic-title">1. Deadlock Kya Hai?</h3>
+                <ul>
+                    <li>Jab processes ek doosre ka wait karte reh jaate hain</li>
+                    <li>System hang ho jata hai</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3 class="topic-title">2. Deadlock ke 4 Conditions</h3>
+                <ul>
+                    <li>Mutual Exclusion</li>
+                    <li>Hold and Wait</li>
+                    <li>No Preemption</li>
+                    <li>Circular Wait</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3 class="topic-title">3. Deadlock Solutions</h3>
+                <ul>
+                    <li>Prevention: Conditions ko rokna</li>
+                    <li>Avoidance: Banker's Algorithm</li>
+                    <li>Detection: Check karke handle karna</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Memory Management -->
+        <div class="section">
+            <h2 class="section-title">🔸 MEMORY MANAGEMENT</h2>
+            
+            <div class="topic">
+                <h3 class="topic-title">1. Paging</h3>
+                <ul>
+                    <li>Memory ko same size ke pages mein divide karna</li>
+                    <li>Virtual memory ko physical memory se map karna</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3 class="topic-title">2. Virtual Memory</h3>
+                <ul>
+                    <li>Hard disk ko RAM ki tarah use karna</li>
+                    <li>Bade programs ko chota RAM mein chalana</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3 class="topic-title">3. Page Replacement Algorithms</h3>
+                <ul>
+                    <li>FIFO: First In First Out</li>
+                    <li>LRU: Least Recently Used</li>
+                    <li>Optimal: Best but practical nahi</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- File Management -->
+        <div class="section">
+            <h2 class="section-title">🔸 FILE MANAGEMENT</h2>
+            
+            <div class="topic">
+                <h3 class="topic-title">1. File System</h3>
+                <ul>
+                    <li>Files ko organize karne ka tarika</li>
+                    <li>Directory structure maintain karta hai</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3 class="topic-title">2. File Operations</h3>
+                <ul>
+                    <li>Create, Delete, Open, Close</li>
+                    <li>Read, Write, Seek</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Linux Basics -->
+        <div class="section">
+            <h2 class="section-title">🔸 LINUX BASICS</h2>
+            
+            <div class="topic">
+                <h3 class="topic-title">1. Important Commands</h3>
+                <ul>
+                    <li>ls: Directory ki files dekhna</li>
+                    <li>cd: Directory change karna</li>
+                    <li>pwd: Current directory path</li>
+                    <li>mkdir: New directory banana</li>
+                    <li>rm: File ya directory delete karna</li>
+                    <li>cp: Copy karna</li>
+                    <li>mv: Move ya rename karna</li>
+                    <li>cat: File ka content dekhna</li>
+                    <li>who: Logged in users</li>
+                    <li>man: Help dekhna</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3 class="topic-title">2. Linux Features</h3>
+                <ul>
+                    <li>Multi-user system</li>
+                    <li>Security focused</li>
+                    <li>Command line power</li>
+                    <li>Free and open source</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Important Points -->
+        <div class="section">
+            <h2 class="section-title">🔹 YAAD RAKHNE WALI BAATEIN</h2>
+            
+            <div class="topic">
+                <h3 class="topic-title">1. OS ke 3 Main Kaam</h3>
+                <ul>
+                    <li>Resource Management</li>
+                    <li>Process Management</li>
+                    <li>Security Management</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3 class="topic-title">2. Process vs Thread</h3>
+                <ul>
+                    <li>Process: Independent program</li>
+                    <li>Thread: Process ka lightweight version</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3 class="topic-title">3. Memory Management Tips</h3>
+                <ul>
+                    <li>Virtual memory RAM se bada ho sakta hai</li>
+                    <li>Paging fragmentation ko kam karta hai</li>
+                    <li>Cache memory speed badhata hai</li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="#" class="nav-top">Top ↑</a>
+    </div>
+    <footer class="footer">
+    <div class="footer-content">
+        <!-- Main Footer -->
+        <div class="footer-main">
+            <!-- About Section -->
+            <div class="footer-section">
+                <h3>About MahendraPlus</h3>
+                <p>Empowering technology through innovative solutions and educational resources. Dedicated to making complex concepts simple and accessible.</p>
+                <div class="social-links">
+                    <a href="https://github.com/mahendraplus" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/mahendraplus" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/mahendraplus" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto: mahendrakumargahelot@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#tutorials">Tutorials</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#docs">Documentation</a></li>
+                    <li><a href="#guides">Guides</a></li>
+                    <li><a href="#api">API</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>India</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>mahendrakumargahelot@gmail.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-globe"></i>
+                        <span>mahendraplus.github.io</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 MahendraPlus. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#sitemap">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.footer {
+    background: linear-gradient(to right, #1a1c20, #2c3e50);
+    color: #fff;
+    padding: 60px 0 20px;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3 {
+    color: #3498db;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #3498db;
+}
+
+.footer-section p {
+    color: #ecf0f1;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #3498db;
+    transform: translateY(-3px);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #3498db;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.contact-info i {
+    color: #3498db;
+}
+
+.newsletter {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.newsletter h3 {
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-form button {
+    padding: 12px 25px;
+    background: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background: #2980b9;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #ecf0f1;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-bottom-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-main {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+
+<!-- Add Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</body>
+                      </html>
+                      
