@@ -372,7 +372,7 @@
         // Fetch data from JSON file
         async function fetchData() {
             try {
-                const response = await fetch('data.json');
+                const response = await fetch('https://mahendraplus.github.io/ma/data.json');
                 if (!response.ok) throw new Error('Failed to fetch data');
                 const data = await response.json();
                 hostelName = data.hostelName;
