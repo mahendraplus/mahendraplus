@@ -5,7 +5,7 @@
         {
             "id": 1,
             "name": "MALI MAHENDRAKUMAR RAMESHBHAI",
-            "roomNo": "04",
+            "roomNo": "101",
             "entryDate": "10-09-2024",
             "deposit": 5000,
             "monthlyRent": 5500,
@@ -22,7 +22,7 @@
                 },
                 {
                     "period": "Nov 10 - Nov 25",
-                    "amount": 5500,
+                    "amount": 4583,
                     "status": "pending"
                 }
             ]
@@ -678,5 +678,4 @@
             ]
         }
     ]
-                }
-              
+        }
