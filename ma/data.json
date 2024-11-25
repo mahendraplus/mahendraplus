@@ -1,0 +1,682 @@
+
+{
+    "hostelName": "Deepvarsha Hostel",
+    "students": [
+        {
+            "id": 1,
+            "name": "MALI MAHENDRAKUMAR RAMESHBHAI",
+            "roomNo": "04",
+            "entryDate": "10-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 10 - Oct 10",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 10 - Nov 10",
+                    "amount": 5500,
+                    "status": "pending"
+                },
+                {
+                    "period": "Nov 10 - Nov 25",
+                    "amount": 5500,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "PATEL MEET RAJESHBHAI",
+            "roomNo": "102",
+            "entryDate": "15-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 15 - Oct 15",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 15 - Nov 15",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Nov 15 - Nov 25",
+                    "amount": 1833,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "SHARMA RAHUL DINESHBHAI",
+            "roomNo": "103",
+            "entryDate": "01-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 1 - Oct 1",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 1 - Nov 1",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Nov 1 - Nov 25",
+                    "amount": 4583,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "JOSHI PARTH NILESHBHAI",
+            "roomNo": "104",
+            "entryDate": "05-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 5 - Oct 5",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 5 - Nov 5",
+                    "amount": 5500,
+                    "status": "pending"
+                },
+                {
+                    "period": "Nov 5 - Nov 25",
+                    "amount": 3666,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "SHAH DHRUV AMITBHAI",
+            "roomNo": "105",
+            "entryDate": "12-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 12 - Oct 12",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 12 - Nov 12",
+                    "amount": 5500,
+                    "status": "pending"
+                },
+                {
+                    "period": "Nov 12 - Nov 25",
+                    "amount": 2383,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "MEHTA RISHI RAJESHBHAI",
+            "roomNo": "201",
+            "entryDate": "01-10-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Oct 1 - Nov 1",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Nov 1 - Nov 25",
+                    "amount": 4583,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "PRAJAPATI YASH DINESHBHAI",
+            "roomNo": "202",
+            "entryDate": "03-10-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Oct 3 - Nov 3",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Nov 3 - Nov 25",
+                    "amount": 4033,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "SONI DEEP RAJUBHAI",
+            "roomNo": "203",
+            "entryDate": "05-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 5 - Oct 5",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 5 - Nov 5",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Nov 5 - Nov 25",
+                    "amount": 3666,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "DAVE HARSH NILESHBHAI",
+            "roomNo": "204",
+            "entryDate": "08-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 8 - Oct 8",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 8 - Nov 8",
+                    "amount": 5500,
+                    "status": "pending"
+                },
+                {
+                    "period": "Nov 8 - Nov 25",
+                    "amount": 3116,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "name": "RAJPUT VIJAY SINGHBHAI",
+            "roomNo": "205",
+            "entryDate": "15-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 15 - Oct 15",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 15 - Nov 15",
+                    "amount": 5500,
+                    "status": "pending"
+                },
+                {
+                    "period": "Nov 15 - Nov 25",
+                    "amount": 1833,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "name": "BHATT ROHAN MUKESHBHAI",
+            "roomNo": "301",
+            "entryDate": "01-11-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Nov 1 - Nov 25",
+                    "amount": 4583,
+                    "status": "paid"
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "name": "CHAUHAN NIRAV PRAKASHBHAI",
+            "roomNo": "302",
+            "entryDate": "20-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 20 - Oct 20",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 20 - Nov 20",
+                    "amount": 5500,
+                    "status": "pending"
+                },
+                {
+                    "period": "Nov 20 - Nov 25",
+                    "amount": 916,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "name": "DESAI KARAN HITESHBHAI",
+            "roomNo": "303",
+            "entryDate": "25-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 25 - Oct 25",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 25 - Nov 25",
+                    "amount": 5500,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "name": "GANDHI DHRUV SANJAYBHAI",
+            "roomNo": "304",
+            "entryDate": "01-10-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Oct 1 - Nov 1",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Nov 1 - Nov 25",
+                    "amount": 4583,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "name": "JAIN ARYAN RAJESHBHAI",
+            "roomNo": "305",
+            "entryDate": "05-10-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Oct 5 - Nov 5",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Nov 5 - Nov 25",
+                    "amount": 3666,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "name": "KAPOOR ADITYA RAKESHBHAI",
+            "roomNo": "401",
+            "entryDate": "10-10-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Oct 10 - Nov 10",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Nov 10 - Nov 25",
+                    "amount": 2750,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "name": "SHAH MIHIR BHAVESHBHAI",
+            "roomNo": "402",
+            "entryDate": "15-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 15 - Oct 15",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 15 - Nov 15",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Nov 15 - Nov 25",
+                    "amount": 1833,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "name": "MEHTA PARTH JITENDRABHAI",
+            "roomNo": "403",
+            "entryDate": "20-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 20 - Oct 20",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 20 - Nov 20",
+                    "amount": 5500,
+                    "status": "pending"
+                },
+                {
+                    "period": "Nov 20 - Nov 25",
+                    "amount": 916,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "name": "PATEL DHYEY ASHWINBHAI",
+            "roomNo": "404",
+            "entryDate": "25-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 25 - Oct 25",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 25 - Nov 25",
+                    "amount": 5500,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "name": "RANA HARSH RAJENDRABHAI",
+            "roomNo": "405",
+            "entryDate": "01-10-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Oct 1 - Nov 1",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Nov 1 - Nov 25",
+                    "amount": 4583,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+    "id": 21,
+            "name": "SONI MEET RAJESHBHAI",
+            "roomNo": "501",
+            "entryDate": "05-10-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Oct 5 - Nov 5",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Nov 5 - Nov 25",
+                    "amount": 3666,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 22,
+            "name": "THAKKAR KEVIN NILESHBHAI",
+            "roomNo": "502",
+            "entryDate": "08-10-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Oct 8 - Nov 8",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Nov 8 - Nov 25",
+                    "amount": 3116,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "name": "VYAS DARSHAN HITESHBHAI",
+            "roomNo": "503",
+            "entryDate": "12-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 12 - Oct 12",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 12 - Nov 12",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Nov 12 - Nov 25",
+                    "amount": 2383,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "name": "ZAVERI DHRUV PARESHBHAI",
+            "roomNo": "504",
+            "entryDate": "15-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 15 - Oct 15",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 15 - Nov 15",
+                    "amount": 5500,
+                    "status": "pending"
+                },
+                {
+                    "period": "Nov 15 - Nov 25",
+                    "amount": 1833,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "name": "BHAVSAR NEEL AMITBHAI",
+            "roomNo": "505",
+            "entryDate": "18-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 18 - Oct 18",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 18 - Nov 18",
+                    "amount": 5500,
+                    "status": "pending"
+                },
+                {
+                    "period": "Nov 18 - Nov 25",
+                    "amount": 1283,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 26,
+            "name": "DAVE SHREY YOGESHBHAI",
+            "roomNo": "601",
+            "entryDate": "20-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 20 - Oct 20",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 20 - Nov 20",
+                    "amount": 5500,
+                    "status": "pending"
+                },
+                {
+                    "period": "Nov 20 - Nov 25",
+                    "amount": 916,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "name": "JOSHI DHYEY SANJAYBHAI",
+            "roomNo": "602",
+            "entryDate": "22-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 22 - Oct 22",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 22 - Nov 22",
+                    "amount": 5500,
+                    "status": "pending"
+                },
+                {
+                    "period": "Nov 22 - Nov 25",
+                    "amount": 550,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 28,
+            "name": "MODI PARTH RAJESHBHAI",
+            "roomNo": "603",
+            "entryDate": "25-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 25 - Oct 25",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 25 - Nov 25",
+                    "amount": 5500,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 29,
+            "name": "SHAH KRISH HITESHBHAI",
+            "roomNo": "604",
+            "entryDate": "28-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 28 - Oct 28",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 28 - Nov 25",
+                    "amount": 5133,
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": 30,
+            "name": "TRIVEDI DHRUV MEHULBHAI",
+            "roomNo": "605",
+            "entryDate": "30-09-2024",
+            "deposit": 5000,
+            "monthlyRent": 5500,
+            "payments": [
+                {
+                    "period": "Sept 30 - Oct 30",
+                    "amount": 5500,
+                    "status": "paid"
+                },
+                {
+                    "period": "Oct 30 - Nov 25",
+                    "amount": 4766,
+                    "status": "pending"
+                }
+            ]
+        }
+    ]
+                }
+              
