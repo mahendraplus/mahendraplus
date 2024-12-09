@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepvarsha Hostel - Student List</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="hostelName">
+                <i class="fas fa-building"></i>
+                Loading...
+            </h1>
+            <p>Student List & Bills</p>
+        </div>
+
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search by name, room number...">
+            </div>
+        </div>
+
+        <div class="student-list" id="studentList">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading students data...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="billModal">
+        <div class="modal-content">
+            <span class="close">
+                <i class="fas fa-times"></i>
+            </span>
+            <div id="billContent"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
