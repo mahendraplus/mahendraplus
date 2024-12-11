@@ -6,13 +6,14 @@
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
+
       const testimonials = await response.json();
       const testimonialsList = document.getElementById('testimonials-list');
 
       // Clear the list before populating
       testimonialsList.innerHTML = '';
 
-      // Create testimonials items
+      // Populate testimonials
       testimonials.forEach((item) => {
         const testimonialItem = document.createElement('li');
         testimonialItem.className = 'testimonials-item';

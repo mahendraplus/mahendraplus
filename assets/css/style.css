@@ -1,3 +1,63 @@
+  /*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
+  # Quick Edit  -------------------------------# 
+  # Author: Mahendra Mali
+  # GitHub: https://github.com/mahendraplus
+  # DATE: 20-10-2024  TIME: 21:58:51
+  \*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
+  :root {
+    --body-bg-solid: rgb(75, 77, 110);
+    --body-bg-gradient: linear-gradient(150deg,
+        hsl(49, 100%, 15%),
+        hsla(310, 76%, 15%, 0.85),
+        hsla(140, 76%, 15%, 0.85),
+        hsla(197, 80%, 15%, 0.85),
+        hsla(273, 80%, 15%, 0.85));
+    --main-border-gradient: linear-gradient(to right, hsla(212, 100%, 50%, 0), hsla(0, 0%, 25%, 0));
+    --div-gradient-bg: rgba(39, 44, 66, 0.397);
+    --menu-gradient: linear-gradient(to right, hsl(46, 78%, 56%), hsl(337, 100%, 64%));
+    --profile-gradient-bg: linear-gradient(to bottom right, hsla(0, 0%, 0%, 0.26), hsla(0, 0%, 0%, 0.349));
+    --btn-hover-gradient-bg: linear-gradient(to bottom right, hsl(320, 69%, 50%) 0%, hsla(51, 73%, 48%, 0.795) 50%);
+    --btn-hover-gradient-bg-2: linear-gradient(135deg, hsla(283, 69%, 49%, 0.158) 0%, hsla(305, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
+    --light-nav: linear-gradient(to right, hsl(46, 78%, 56%), hsl(0, 0%, 0%));
+    --article-bg: hsla(209, 34%, 15%, 0.404);
+    --note: hsla(218, 36%, 53%, 0.178);
+    --icon-bg-mini: hsla(0, 0%, 0%, 0);
+    --icon-mini: hsl(0, 0%, 70%);
+    --main-border: hsla(233, 100%, 94%, 0.123);
+    --scrollbar-1: rgba(83, 83, 83, 0.548);
+    --scrollbar-2: rgba(255, 255, 255, 0.623);
+    --vegas-gold: hwb(19 55% 11%);
+    --light-gray: hsl(0, 0%, 84%);
+    --light-gray-70: hsla(0, 7%, 89%, 0.747);
+    --bittersweet-shimmer: hsl(0, 43%, 51%);
+    --box-shadow-1: 0px 0px 15px hsla(0, 0%, 0%, 0.267);
+    --box-shadow-2: 0 16px 30px hsla(256, 33%, 18%, 0);
+    --box-shadow-3: 0 16px 40px hsla(0, 45%, 55%, 0);
+    --box-shadow-4: 0 25px 50px hsl(0, 68%, 61%);
+    --box-shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+    --font-color-1: hsl(0, 0%, 99%);
+    --font-color-2: hsl(0, 0%, 87%);
+
+    /******FONT******/
+    --ff-poppins: "Merienda", system-ui;
+    --font-size-1: 24px;
+    --font-size-2: 18px;
+    --font-size-3: 15px;
+    --font-size-4: 16px;
+    --font-size-5: 15px;
+    --font-size-6: 14px;
+    --font-size-7: 13px;
+    --font-size-8: 11px;
+    --font-size-9: 10px;
+    --font-weight-300: 300;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease-in-out;
+    --avatar-box--animation-position: 0px;
+  }
+
 /*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\ 
 # Author: Mahendra Mali
 # GitHub: https://github.com/mahendraplus
@@ -7,80 +67,12 @@
 .crt{
   display: none;
 }
-
-
-
-:root {
-  /*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
-  # Quick Edit  -------------------------------# 
-  # Author: Mahendra Mali
-  # GitHub: https://github.com/mahendraplus
-  # DATE: 20-10-2024  TIME: 21:58:51
-  \*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
-
-  --body-bg-solid: rgb(83, 98, 129);
-  --body-bg-gradient: linear-gradient(150deg,
-      hsl(49, 100%, 15%),
-      hsla(310, 76%, 15%, 0.85),
-      hsla(140, 76%, 15%, 0.85),
-      hsla(197, 80%, 15%, 0.85),
-      hsla(273, 80%, 15%, 0.85));
-  --main-border-gradient: linear-gradient(to right, hsla(212, 100%, 50%, 0), hsla(0, 0%, 25%, 0));
-  --div-gradient-bg: rgba(39, 44, 66, 0.397);
-  --menu-gradient: linear-gradient(to right, hsl(46, 78%, 56%), hsl(337, 100%, 64%));
-  --profile-gradient-bg: linear-gradient(to bottom right, hsla(0, 0%, 0%, 0.26), hsla(0, 0%, 0%, 0.349));
-  --btn-hover-gradient-bg: linear-gradient(to bottom right, hsl(320, 69%, 50%) 0%, hsla(51, 73%, 48%, 0.795) 50%);
-  --btn-hover-gradient-bg-2: linear-gradient(135deg, hsla(283, 69%, 49%, 0.158) 0%, hsla(305, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
-
-
-
-
-  --light-nav: linear-gradient(to right, hsl(46, 78%, 56%), hsl(0, 0%, 0%));
-
-
-  --article-bg: hsla(209, 34%, 15%, 0.404);
-  --note: hsla(218, 36%, 53%, 0.178);
-
-  --icon-bg-mini: hsla(0, 0%, 0%, 0);
-  --icon-mini: hsl(0, 0%, 70%);
-
-  --main-border: hsla(233, 100%, 94%, 0.123);
-
-  --scrollbar-1: rgba(83, 83, 83, 0.548);
-  --scrollbar-2: rgba(255, 255, 255, 0.623);
-
-  --vegas-gold: hwb(19 55% 11%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 7%, 89%, 0.747);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
-
-  --box-shadow-1: 0px 0px 15px hsla(0, 0%, 0%, 0.267);
-  --box-shadow-2: 0 16px 30px hsla(256, 33%, 18%, 0);
-  --box-shadow-3: 0 16px 40px hsla(0, 45%, 55%, 0);
-  --box-shadow-4: 0 25px 50px hsl(0, 68%, 61%);
-  --box-shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
-
-  --font-color-1: hsl(0, 0%, 99%);
-  --font-color-2: hsl(0, 0%, 87%);
-  --ff-poppins: "Merienda", system-ui;
-  --font-size-1: 24px;
-  --font-size-2: 18px;
-  --font-size-3: 15px;
-  --font-size-4: 16px;
-  --font-size-5: 15px;
-  --font-size-6: 14px;
-  --font-size-7: 13px;
-  --font-size-8: 11px;
-  --font-size-9: 10px;
-  --font-weight-300: 300;
-  --font-weight-400: 400;
-  --font-weight-500: 500;
-  --font-weight-600: 600;
-  --transition-1: 0.25s ease;
-  --transition-2: 0.5s ease-in-out;
-
-  --avatar-box--animation-position: 0px;
+/* Disable tap highlight for mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
+
 
 /*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*\
 # Author: Mahendra Mali
@@ -147,8 +139,6 @@ html {
 body {
   background: var(--body-bg-solid);
   background-size: cover;
-  transition: background 0.3s ease-in-out;
-
 }
 
 
@@ -169,7 +159,7 @@ body {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  filter: blur(2px);
+  opacity: 1;
 }
 
 
@@ -390,7 +380,7 @@ main {
     \*<<<<<<<<<<<<<<<<<<<<MAX>>>>>>>>>>>>>>>>>>>>*/
   background-size: var(--random-bg-size), 90px 90px;
   animation: rotateGlow 7s linear infinite, colorShift 3s ease-in-out infinite;
-  filter: blur(40px);
+  filter: blur(30px);
   z-index: -1;
 }
 
@@ -420,14 +410,7 @@ main {
 
 .avatar-box img {
   border-radius: 100%;
-  opacity: 0.8;
-
-}
-
-.avatar-box:hover img {
-  transform: scale(1.03);
-
-
+  opacity: 1;
 
 }
 
@@ -457,8 +440,8 @@ main {
   right: -15px;
   border-radius: 0 15px;
   font-size: 13px;
-  color: var(--body-bg-solid);
-  background: rgb(12 17 41 / 40%);
+  color: var(--font-color-2);
+  background: var(--article-bg);
   padding: 10px;
   box-shadow: var(--box-shadow-2);
   transition: var(--transition-1);
@@ -470,8 +453,8 @@ main {
   position: absolute;
   inset: 1px;
   border-radius: inherit;
-  background: var(--div-gradient-bg);
   transition: var(--transition-1);
+
   z-index: -1;
 }
 
@@ -484,6 +467,7 @@ main {
 .info_more-btn:hover::before,
 .info_more-btn:focus::before {
   color: var(--font-color-1);
+  
 
 
 }
@@ -583,27 +567,27 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(0, 0%, 0%, 0.281);
-  backdrop-filter: blur(20px);
-  border: 5px solid var(--main-border);
-  border-radius: 100px 100px 100px 100px;
-  box-shadow: var(--box-shadow-2);
   z-index: 5;
+  background-color: black;
+  display: none;
+  
 }
 
 .navbar-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  padding: 0px 0px;
+  align-items: center; 
+  
 }
 
 .navbar-link {
   color: var(--light-gray);
   font-size: var(--font-size-7);
-  padding: 20px 10px;
   transition: color var(--transition-1);
+  padding: 10px;
+  
+  
 }
 
 .navbar-link:hover,
@@ -613,7 +597,6 @@ main {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  transform: scale(1.2);
 }
 
 .navbar-link.active {
@@ -622,6 +605,8 @@ main {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+  
+ 
 }
 
 
@@ -1658,11 +1643,14 @@ input[type="file"]::file-selector-button:hover {
   .blog-banner-box {
     height: auto;
   }
+  
 
 }
 
 
 @media (min-width: 580px) {
+
+
 
 
   :root {
@@ -1768,14 +1756,26 @@ input[type="file"]::file-selector-button:hover {
 
   .navbar {
     border-radius: 20px 20px 0 0;
+    position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  border-radius: 100px;
+  background-color: var(--body-bg-solid);
+  box-shadow: var(--box-shadow-1);
+  padding: 7px;
+  display: block;
+    
   }
 
   .navbar-list {
-    gap: 20px;
+    gap: 15px;
   }
 
   .navbar-link {
     --font-size-8: 14px;
+    
   }
 
 
@@ -2080,14 +2080,17 @@ input[type="file"]::file-selector-button:hover {
     left: auto;
     right: 0;
     width: max-content;
-    border-radius: 0 20px;
+    border-radius: 25px;
     padding: 0 20px;
     box-shadow: none;
+    margin-top: 10px;
+    margin-right: 10px;
+    
   }
 
   .navbar-list {
-    gap: 30px;
-    padding: 0 20px;
+    gap: 10px;
+    padding: 0 0px;
   }
 
   .navbar-link {
