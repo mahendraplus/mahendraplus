@@ -1,47 +1,56 @@
 
-  // Get the query parameters from the URL
-  const params = new URLSearchParams(window.location.search);
-  const page = params.get('page'); // Extract the 'page' parameter
-  const title = params.get('title'); // Extract the 'title' parameter
-  const msg = params.get('msg'); // Extract the 'msg' parameter
-  const htmlContent = params.get('html'); // Extract the 'html' parameter
-
-  // Get reference to the dynamicContentLoader div
+  // Get all the navbar buttons
+  const navbarLinks = document.querySelectorAll('.navbar-link');
+  
+  // Reference to dynamic content loader
   const dynamicContentLoader = document.getElementById('dynamicContentLoader');
   
-  // Create the article element with dynamic data
-  const article = document.createElement('article');
-  article.classList.add(page || 'about'); // Set class for article (default is 'about')
-  article.classList.add('active'); // Add the 'active' class to show the article
-  article.dataset.page = page || 'about'; // Set the data-page attribute
-  
-  // Create the header with the title
-  const header = document.createElement('header');
-  const h2 = document.createElement('h2');
-  h2.classList.add('h2', 'article-title');
-  h2.textContent = title || 'Default Title'; // Set title from URL or default
-  header.appendChild(h2);
-  
-  // Create the section for the message
-  const sectionAboutText = document.createElement('section');
-  sectionAboutText.classList.add('about-text');
-  const p = document.createElement('p');
-  p.textContent = msg || 'No message provided.'; // Set message from URL or default
-  sectionAboutText.appendChild(p);
-
-  // Create the section for custom HTML content
-  const sectionService = document.createElement('section');
-  sectionService.classList.add('service');
-  if (htmlContent) {
-    sectionService.innerHTML = decodeURIComponent(htmlContent); // Load custom HTML content
-  } else {
-    sectionService.innerHTML = '<p>No custom HTML content available.</p>'; // Default message if no HTML
+  // Function to remove 'active' class from all navbar links
+  function deactivateAllLinks() {
+    navbarLinks.forEach(link => link.classList.remove('active'));
   }
 
-  // Append all sections to the article
-  article.appendChild(header);
-  article.appendChild(sectionAboutText);
-  article.appendChild(sectionService);
+  // Function to load content based on the button clicked
+  function loadContent(page) {
+    // Create the article dynamically based on the page name
+    const article = document.createElement('article');
+    article.classList.add(page); // Add the page name as a class
+    article.classList.add('active'); // Make it active
 
-  // Append the article to the dynamicContentLoader div
-  dynamicContentLoader.appendChild(article);
+    // Create header and title for the article
+    const header = document.createElement('header');
+    const h2 = document.createElement('h2');
+    h2.classList.add('h2', 'article-title');
+    h2.textContent = `${page.charAt(0).toUpperCase() + page.slice(1)} Page`; // Capitalize the first letter of page
+    header.appendChild(h2);
+
+    // Create the content section
+    const section = document.createElement('section');
+    section.classList.add('content');
+    section.innerHTML = `<p>This is the ${page} content. You can replace this with dynamic content or fetch data from a URL.</p>`;
+    
+    // Append content to the article
+    article.appendChild(header);
+    article.appendChild(section);
+    
+    // Clear existing content and append the new article
+    dynamicContentLoader.innerHTML = ''; // Clear previous content
+    dynamicContentLoader.appendChild(article);
+  }
+
+  // Handle click on navbar items
+  navbarLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      const page = this.getAttribute('data-nav-link'); // Get the page name from the button's data attribute
+      
+      // Deactivate all links and activate the clicked one
+      deactivateAllLinks();
+      this.classList.add('active');
+      
+      // Load content dynamically for the clicked page
+      loadContent(page);
+    });
+  });
+
+  // Optionally load content for the first item by default
+  loadContent('about'); // Initially load the 'about' page content
