@@ -1,56 +1,25 @@
-
-  // Get all the navbar buttons
-  const navbarLinks = document.querySelectorAll('.navbar-link');
-  
-  // Reference to dynamic content loader
-  const dynamicContentLoader = document.getElementById('dynamicContentLoader');
-  
-  // Function to remove 'active' class from all navbar links
-  function deactivateAllLinks() {
-    navbarLinks.forEach(link => link.classList.remove('active'));
-  }
-
-  // Function to load content based on the button clicked
-  function loadContent(page) {
-    // Create the article dynamically based on the page name
-    const article = document.createElement('article');
-    article.classList.add(page); // Add the page name as a class
-    article.classList.add('active'); // Make it active
-
-    // Create header and title for the article
-    const header = document.createElement('header');
-    const h2 = document.createElement('h2');
-    h2.classList.add('h2', 'article-title');
-    h2.textContent = `${page.charAt(0).toUpperCase() + page.slice(1)} Page`; // Capitalize the first letter of page
-    header.appendChild(h2);
-
-    // Create the content section
-    const section = document.createElement('section');
-    section.classList.add('content');
-    section.innerHTML = `<p>This is the ${page} content. You can replace this with dynamic content or fetch data from a URL.</p>`;
-    
-    // Append content to the article
-    article.appendChild(header);
-    article.appendChild(section);
-    
-    // Clear existing content and append the new article
-    dynamicContentLoader.innerHTML = ''; // Clear previous content
-    dynamicContentLoader.appendChild(article);
-  }
-
-  // Handle click on navbar items
-  navbarLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      const page = this.getAttribute('data-nav-link'); // Get the page name from the button's data attribute
-      
-      // Deactivate all links and activate the clicked one
-      deactivateAllLinks();
-      this.classList.add('active');
-      
-      // Load content dynamically for the clicked page
-      loadContent(page);
+// Get the query parameters from the URL
+    const params = new URLSearchParams(window.location.search);
+    const page = params.get('page'); // Extract the 'page' parameter
+    // Select all articles
+    const articles = document.querySelectorAll('article');
+    // Default section if no valid page is provided
+    const defaultPage = 'about';
+    // Flag to check if a matching page was found
+    let isPageFound = false;
+    // Loop through articles to show the matched one
+    articles.forEach(article => {
+      if (article.dataset.page === page) {
+        article.classList.add('active'); // Add 'active' class to show
+        isPageFound = true; // A matching page was found
+      } else {
+        article.classList.remove('active'); // Hide other sections
+      }
     });
-  });
-
-  // Optionally load content for the first item by default
-  loadContent('about'); // Initially load the 'about' page content
+    // Show the default page if no matching page was found
+    if (!isPageFound) {
+      const defaultArticle = document.querySelector(article[data-page="${defaultPage}"]);
+      if (defaultArticle) {
+        defaultArticle.classList.add('active');
+      }
+    }
