@@ -6,19 +6,39 @@
   const msg = params.get('msg'); // Extract the 'msg' parameter
   const htmlContent = params.get('html'); // Extract the 'html' parameter
 
+  // Select all articles
+  const articles = document.querySelectorAll('article');
+  // Default section if no valid page is provided
+  const defaultPage = 'about';
+  // Flag to check if a matching page was found
+  let isPageFound = false;
+
   // Get references to the target elements
   const pageNameElement = document.querySelector('.article-title');
   const dynamicContentLoader = document.getElementById('dynamicContentLoader');
   const messageContainer = document.createElement('div'); // Container for the custom message
 
-  // Check for 'page' and 'title' parameters
-  if (page) {
-    // Dynamically set the page name for the article
-    const article = document.querySelector(`article[data-page="${page}"]`);
-    if (article) {
-      pageNameElement.textContent = title || 'Default Title'; // Display title or default
-      article.classList.add('active'); // Add the 'active' class to show this article
+  // Loop through articles to show the matched one
+  articles.forEach(article => {
+    if (article.dataset.page === page) {
+      article.classList.add('active'); // Add 'active' class to show
+      isPageFound = true; // A matching page was found
+    } else {
+      article.classList.remove('active'); // Hide other sections
     }
+  });
+
+  // Show the default page if no matching page was found
+  if (!isPageFound) {
+    const defaultArticle = document.querySelector(`article[data-page="${defaultPage}"]`);
+    if (defaultArticle) {
+      defaultArticle.classList.add('active');
+    }
+  }
+
+  // Set the title for the page
+  if (title) {
+    pageNameElement.textContent = title; // Set title in the article header
   }
 
   // Display custom message if provided
