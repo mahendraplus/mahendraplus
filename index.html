@@ -1130,14 +1130,12 @@
       </article>
      
 <!--EXTRA-->
-      <article class="custom" data-page="custom">
+    <article class="max" data-page="max">
         <header>
-          <h2 id="customTitle" class="h2 article-title"></h2>
+          <h2 class="h2 article-title">Hello, Max!</h2>
         </header>
-          <section id="customHtml">
-          </section>
       </article>
-
+      
     </div>
   </main>
   <!--Main JS -->
@@ -1146,7 +1144,7 @@
   <script src="./assets/js/menu.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
-  <script>
+    <script>
     // Get the query parameters from the URL
     const params = new URLSearchParams(window.location.search);
     const page = params.get('page'); // Extract the 'page' parameter
@@ -1167,12 +1165,12 @@
     });
     // Show the default page if no matching page was found
     if (!isPageFound) {
-      const defaultArticle = document.querySelector(article[data-page="${defaultPage}"]);
+      const defaultArticle = document.querySelector(`article[data-page="${defaultPage}"]`);
       if (defaultArticle) {
         defaultArticle.classList.add('active');
       }
     }
-  </script>  
+  </script>
 </body>
 
 </html>
