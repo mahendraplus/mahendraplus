@@ -6,54 +6,42 @@
   const msg = params.get('msg'); // Extract the 'msg' parameter
   const htmlContent = params.get('html'); // Extract the 'html' parameter
 
-  // Select all articles
-  const articles = document.querySelectorAll('article');
-  // Default section if no valid page is provided
-  const defaultPage = 'about';
-  // Flag to check if a matching page was found
-  let isPageFound = false;
-
-  // Get references to the target elements
-  const pageNameElement = document.querySelector('.article-title');
+  // Get reference to the dynamicContentLoader div
   const dynamicContentLoader = document.getElementById('dynamicContentLoader');
-  const messageContainer = document.createElement('div'); // Container for the custom message
+  
+  // Create the article element with dynamic data
+  const article = document.createElement('article');
+  article.classList.add(page || 'about'); // Set class for article (default is 'about')
+  article.classList.add('active'); // Add the 'active' class to show the article
+  article.dataset.page = page || 'about'; // Set the data-page attribute
+  
+  // Create the header with the title
+  const header = document.createElement('header');
+  const h2 = document.createElement('h2');
+  h2.classList.add('h2', 'article-title');
+  h2.textContent = title || 'Default Title'; // Set title from URL or default
+  header.appendChild(h2);
+  
+  // Create the section for the message
+  const sectionAboutText = document.createElement('section');
+  sectionAboutText.classList.add('about-text');
+  const p = document.createElement('p');
+  p.textContent = msg || 'No message provided.'; // Set message from URL or default
+  sectionAboutText.appendChild(p);
 
-  // Loop through articles to show the matched one
-  articles.forEach(article => {
-    if (article.dataset.page === page) {
-      article.classList.add('active'); // Add 'active' class to show
-      isPageFound = true; // A matching page was found
-    } else {
-      article.classList.remove('active'); // Hide other sections
-    }
-  });
-
-  // Show the default page if no matching page was found
-  if (!isPageFound) {
-    const defaultArticle = document.querySelector(`article[data-page="${defaultPage}"]`);
-    if (defaultArticle) {
-      defaultArticle.classList.add('active');
-    }
-  }
-
-  // Set the title for the page
-  if (title) {
-    pageNameElement.textContent = title; // Set title in the article header
-  }
-
-  // Display custom message if provided
-  if (msg) {
-    messageContainer.innerHTML = `<p>Message: ${msg}</p>`; // Display the custom message
-    messageContainer.style.marginTop = '20px';
-    messageContainer.style.padding = '10px';
-    messageContainer.style.border = '1px solid #ccc';
-    messageContainer.style.backgroundColor = '#f9f9f9';
-    dynamicContentLoader.appendChild(messageContainer);
-  }
-
-  // Check if 'html' content is provided and load it into the div
+  // Create the section for custom HTML content
+  const sectionService = document.createElement('section');
+  sectionService.classList.add('service');
   if (htmlContent) {
-    dynamicContentLoader.innerHTML += decodeURIComponent(htmlContent); // Decode and insert the HTML content
+    sectionService.innerHTML = decodeURIComponent(htmlContent); // Load custom HTML content
   } else {
-    dynamicContentLoader.innerHTML = `<p>Error: No HTML content provided.</p>`; // Error message if no HTML is provided
+    sectionService.innerHTML = '<p>No custom HTML content available.</p>'; // Default message if no HTML
   }
+
+  // Append all sections to the article
+  article.appendChild(header);
+  article.appendChild(sectionAboutText);
+  article.appendChild(sectionService);
+
+  // Append the article to the dynamicContentLoader div
+  dynamicContentLoader.appendChild(article);
