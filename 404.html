@@ -23,12 +23,35 @@
     }
   </style>
   <script>
-    // Redirect logic
-    if (window.location.pathname === '/sitemap.xml') {
-      // Redirect sitemap.xml requests
-      window.location.href = '/assets/xml/sitemap.xml';
-    } else {
-      // General 404 logic with countdown
+    // Define the path to the JSON file
+    const jsonUrl = '/assets/json/redirects.json';
+
+    // Fetch the JSON and handle redirection logic
+    fetch(jsonUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Failed to load JSON: ${response.statusText}`);
+        }
+        return response.json();
+      })
+      .then(redirects => {
+        // Check if the current path matches any redirect rule
+        const currentPath = window.location.pathname;
+        if (redirects[currentPath]) {
+          window.location.href = redirects[currentPath];
+        } else {
+          // No match found; start the 5-second countdown to the homepage
+          startCountdown();
+        }
+      })
+      .catch(error => {
+        console.error('Error loading redirects JSON:', error);
+        // If JSON loading fails, fallback to countdown
+        startCountdown();
+      });
+
+    // Countdown redirect to homepage
+    function startCountdown() {
       let countdown = 5; // Start countdown at 5 seconds
       const interval = setInterval(() => {
         document.getElementById('countdown').innerText = countdown;
