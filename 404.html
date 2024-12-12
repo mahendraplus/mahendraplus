@@ -3,73 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - Page Not Found</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 50px;
-    }
-    h1 {
-      color: #ff0000;
-    }
-    p {
-      font-size: 18px;
-    }
-    #countdown {
-      font-size: 24px;
-      font-weight: bold;
-      color: #0078d7;
-    }
-  </style>
+  <title>Redirecting...</title>
   <script>
-    // Define the path to the JSON file
-    const jsonUrl = '/assets/json/redirects.json';
-
-    // Fetch the JSON and handle redirection logic
-    fetch(jsonUrl)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`Failed to load JSON: ${response.statusText}`);
-        }
-        return response.json();
-      })
-      .then(redirects => {
-        // Check if the current path matches any redirect rule
-        const currentPath = window.location.pathname;
-        if (redirects[currentPath]) {
-          window.location.href = redirects[currentPath];
+    (async () => {
+      const jsonUrl = 'https://mahendraplus.github.io/assets/json/redirects.json';
+      const currentPath = window.location.pathname;
+      const errorPage = `https://mahendraplus.github.io/?page=error&url=${encodeURIComponent(window.location.href)}`;
+      try {
+        const response = await fetch(jsonUrl);
+        if (response.ok) {
+          const redirects = await response.json();
+          window.location.replace(redirects[currentPath] || errorPage);
         } else {
-          // No match found; start the 5-second countdown to the homepage
-          startCountdown();
+          window.location.replace(errorPage);
         }
-      })
-      .catch(error => {
-        console.error('Error loading redirects JSON:', error);
-        // If JSON loading fails, fallback to countdown
-        startCountdown();
-      });
-
-    // Countdown redirect to homepage
-    function startCountdown() {
-      let countdown = 5; // Start countdown at 5 seconds
-      const interval = setInterval(() => {
-        document.getElementById('countdown').innerText = countdown;
-        if (countdown === 0) {
-          clearInterval(interval);
-          window.location.href = '/'; // Redirect to homepage
-        }
-        countdown--;
-      }, 1000);
-    }
+      } catch {
+        window.location.replace(errorPage);
+      }
+    })();
   </script>
 </head>
-<body>
-  <h1>404 - Page Not Found</h1>
-  <p>The page you're looking for doesn't exist.</p>
-  <p>
-    You'll be redirected to the 
-    <a href="/">homepage</a> in <span id="countdown">5</span> seconds.
-  </p>
-</body>
+<body></body>
 </html>
