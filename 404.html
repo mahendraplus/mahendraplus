@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found</title>
-    <link rel="stylesheet" href="https://mahendraplus.github.io/style.css">
-    <meta http-equiv="refresh" content="0; url=https://mahendraplus.github.io">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    h1 {
+      color: #ff0000;
+    }
+    p {
+      font-size: 18px;
+    }
+    #countdown {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0078d7;
+    }
+  </style>
+  <script>
+    // Redirect logic
+    if (window.location.pathname === '/sitemap.xml') {
+      // Redirect sitemap.xml requests
+      window.location.href = '/assets/xml/sitemap.xml';
+    } else {
+      // General 404 logic with countdown
+      let countdown = 5; // Start countdown at 5 seconds
+      const interval = setInterval(() => {
+        document.getElementById('countdown').innerText = countdown;
+        if (countdown === 0) {
+          clearInterval(interval);
+          window.location.href = '/'; // Redirect to homepage
+        }
+        countdown--;
+      }, 1000);
+    }
+  </script>
 </head>
 <body>
-    <div class="container">
-        <h1>404 - Page Not Found</h1>
-        <p>You are being redirected to the <a href="https://mahendraplus.github.io">homepage</a>.</p>
-    </div>
+  <h1>404 - Page Not Found</h1>
+  <p>The page you're looking for doesn't exist.</p>
+  <p>
+    You'll be redirected to the 
+    <a href="/">homepage</a> in <span id="countdown">5</span> seconds.
+  </p>
 </body>
 </html>
