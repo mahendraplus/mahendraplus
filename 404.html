@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
   <script>
     (async () => {
       const jsonUrl = 'https://mahendraplus.github.io/assets/json/redirects.json';
       const currentPath = window.location.pathname;
-      const errorPage = `https://mahendraplus.github.io/?page=error&url=${encodeURIComponent(window.location.href)}`;
+      const errorPage = `https://mahendraplus.github.io/?p=error&t=Error-404&u=${encodeURIComponent(window.location.href)}`;
       try {
         const response = await fetch(jsonUrl);
         if (response.ok) {
