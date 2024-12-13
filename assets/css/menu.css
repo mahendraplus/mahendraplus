@@ -223,6 +223,8 @@
     
   }
 
+
+ /* ADDED BY MAX -FIXED  */
   .cdpn-mobile-menu__list {
     --uia-control-padding: 1rem .5rem; 
     box-sizing: border-box;
@@ -233,40 +235,26 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     font-size: 2rem;
-    font-weight: 700;
-    text-transform: uppercase;  
+    font-weight: 700; 
     color: var(--cdpn-mobile-menu-link-color, var(--_cdpn-mobile-menu-text-color));
   }
   
   .cdpn-mobile-menu__list li{
     display: inline-flex;
-    align-items: center;  /* ADDED BY MAX -FIXED  */
+    align-items: center; 
     width: 100%;
     margin-bottom: 10px;
     padding: 7px;
    
   }
-/* AMENU FOOTER  */
 .cdpn-mobile-menu__list p {
-  font-size: 15px;
+  font-size: 12px;
   color: #fff;
   text-align: center;
-  animation: zoom 1.5s infinite;
   position: relative;
   overflow: hidden;
 }
 
-@keyframes zoom {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 
 
 
