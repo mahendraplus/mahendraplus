@@ -1,25 +1,88 @@
-// Get the query parameters from the URL
-    const params = new URLSearchParams(window.location.search);
-    const page = params.get('page'); // Extract the 'page' parameter
-    // Select all articles
-    const articles = document.querySelectorAll('article');
-    // Default section if no valid page is provided
-    const defaultPage = 'about';
-    // Flag to check if a matching page was found
-    let isPageFound = false;
-    // Loop through articles to show the matched one
-    articles.forEach(article => {
-      if (article.dataset.page === page) {
-        article.classList.add('active'); // Add 'active' class to show
-        isPageFound = true; // A matching page was found
-      } else {
-        article.classList.remove('active'); // Hide other sections
+const q = new URLSearchParams(window.location.search);
+const s = q.get('s');
+const p = q.get('p');
+const t = q.get('t');
+const h = q.get('h');
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (s === '0') {
+    const sidebar = document.querySelector('.sidebar');
+    if (sidebar) sidebar.style.display = 'none';
+  }
+
+  let found = false;
+  document.querySelectorAll('article').forEach(article => {
+    if (article.dataset.page === p) {
+      article.classList.add('active');
+      found = true;
+      if (t) {
+        const title = article.querySelector('#customTitle');
+        if (title) title.textContent = decodeURIComponent(t);
       }
-    });
-    // Show the default page if no matching page was found
-    if (!isPageFound) {
-      const defaultArticle = document.querySelector(article[data-page="${defaultPage}"]);
-      if (defaultArticle) {
-        defaultArticle.classList.add('active');
-      }
+    } else {
+      article.classList.remove('active');
     }
+  });
+
+  if (!found) {
+    const defaultArticle = document.querySelector('article[data-page="about"]');
+    if (defaultArticle) defaultArticle.classList.add('active');
+  }
+
+  if (h) {
+    try {
+      const decrypted = CryptoJS.AES.decrypt(h, 'utf8').toString(CryptoJS.enc.Utf8);
+      const decompressed = LZString.decompressFromBase64(decrypted);
+      document.getElementById('contentArea').innerHTML = decompressed || '<p>Error decoding content.</p>';
+    } catch {
+      document.getElementById('contentArea').innerHTML = '<p>Error decoding content.</p>';
+    }
+  } else {
+    document.getElementById('contentArea').innerHTML = '<p>No HTML content found in the URL.</p>';
+  }
+});
+
+//Make yours!!
+document.getElementById('cook').addEventListener('click', function () {
+  const input = document.getElementById('htmlInput').value;
+  const pageTitle = document.getElementById('pageTitle').value;
+  if (!input) {
+    alert('Enter HTML content');
+    return;
+  }
+  const currentUrl = window.location.origin + window.location.pathname;
+  const compressed = LZString.compressToBase64(input);
+  const encrypted = CryptoJS.AES.encrypt(compressed, 'utf8').toString();
+  const url = `${(currentUrl)}?p=1&t=${encodeURIComponent(pageTitle)}&h=${encodeURIComponent(encrypted)}`;
+  document.getElementById("cook").style.display = "none";
+  document.getElementById("preview").style.display = "flex";
+  document.getElementById("share").style.display = "flex";
+  document.getElementById('output').value = url;
+  document.getElementById("preview").addEventListener("click", openPreview);
+  document.getElementById("share").addEventListener("click", share);
+  function openPreview() { window.open(url, "_blank"); }
+function share() {
+if (navigator.share) {
+  navigator.share({
+    title: 'Gift Share',
+    text: `title!`,
+    url: url
+  }).then(() => {
+    console.log('Share was successful');
+  }).catch((error) => {
+    console.log('Error sharing:', error);
+  });
+} else {
+  copyToClipboard(url);
+  alert('Link copied to clipboard! You can now paste it anywhere to share.');
+}
+function copyToClipboard(text) {
+  const textArea = document.createElement('textarea');
+  textArea.value = text;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textArea);
+}
+}
+});
