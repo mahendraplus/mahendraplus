@@ -3,7 +3,7 @@ const s = q.get('s');
 const p = q.get('p');
 const t = q.get('t');
 const h = q.get('h');
-const h = q.get('u');
+const u = q.get('u');
 
 document.addEventListener('DOMContentLoaded', () => {
   if (s === '0') {
@@ -69,8 +69,8 @@ document.getElementById('cook').addEventListener('click', function () {
 function share() {
 if (navigator.share) {
   navigator.share({
-    title: 'This link holds something incredible. Don’t wait, check it out now!',
-    text: `Something amazing is waiting for you. Open now!`,
+    title: 'This link holds something incredible. Dont wait, check it out now!',
+    text: 'Something amazing is waiting for you. Open now!',
     url: url
   }).then(() => {
     console.log('Share was successful');
