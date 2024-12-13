@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 if (u) {
   document.getElementById('errorPath').innerHTML = u;
+  alert(u);
 }
 
   
