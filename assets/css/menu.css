@@ -247,37 +247,27 @@
    
   }
 /* AMENU FOOTER  */
- .cdpn-mobile-menu__list p {
-  font-size: 12px;
+.cdpn-mobile-menu__list p {
+  font-size: 15px;
   color: #fff;
   text-align: center;
-  font-family: Arial, sans-serif;
-  animation: glitch 1.5s infinite;
+  animation: zoom 1.5s infinite;
   position: relative;
   overflow: hidden;
 }
 
-@keyframes glitch {
+@keyframes zoom {
   0% {
-    text-shadow: 2px 0 red, -2px 0 blue;
-  }
-  25% {
-    text-shadow: -2px 0 red, 2px 0 blue;
-    transform: translateX(-2px);
+    transform: scale(1);
   }
   50% {
-    text-shadow: 2px 0 green, -2px 0 pink;
-    transform: translateX(2px);
-  }
-  75% {
-    text-shadow: -2px 0 green, 2px 0 pink;
-    transform: translateX(-1px);
+    transform: scale(1.2);
   }
   100% {
-    text-shadow: 2px 0 red, -2px 0 blue;
-    transform: translateX(0);
+    transform: scale(1);
   }
 }
+
 
 
 
