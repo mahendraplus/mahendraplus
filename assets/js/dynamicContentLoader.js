@@ -3,6 +3,7 @@ const s = q.get('s');
 const p = q.get('p');
 const t = q.get('t');
 const h = q.get('h');
+const h = q.get('u');
 
 document.addEventListener('DOMContentLoaded', () => {
   if (s === '0') {
@@ -29,6 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (defaultArticle) defaultArticle.classList.add('active');
   }
 
+
+if (u) {
+  document.getElementById('errorPath').innerHTML = u;
+}
+  
+  //Make yours!! Decryption -max -id45695 SE.key M$X142@1324
   if (h) {
     try {
       const decrypted = CryptoJS.AES.decrypt(h, 'utf8').toString(CryptoJS.enc.Utf8);
@@ -42,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-//Make yours!!
+//Make yours!! Encryption -max -id12515
 document.getElementById('cook').addEventListener('click', function () {
   const input = document.getElementById('htmlInput').value;
   const pageTitle = document.getElementById('pageTitle').value;
@@ -64,8 +71,8 @@ document.getElementById('cook').addEventListener('click', function () {
 function share() {
 if (navigator.share) {
   navigator.share({
-    title: 'Gift Share',
-    text: `title!`,
+    title: 'This link holds something incredible. Don’t wait, check it out now!',
+    text: `Something amazing is waiting for you. Open now!`,
     url: url
   }).then(() => {
     console.log('Share was successful');
