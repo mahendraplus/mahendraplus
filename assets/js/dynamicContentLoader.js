@@ -30,7 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (defaultArticle) defaultArticle.classList.add('active');
   }
 
-
+if (u) {
+  document.getElementById('errorPath').innerHTML = u;
+}
 
   
   //Make yours!! Decryption -max -id45695 SE.key M$X142@1324
