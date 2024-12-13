@@ -26,7 +26,8 @@
   <link rel="canonical" href="https://mahendraplus.github.io">
 
   <meta name="google-site-verification" content="mvCgleFdir-IgZsbHSp5ztz0bdTRC42Z3o5waBKg9Q4" />
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDT1K708FZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -129,6 +130,8 @@
     href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Exo:ital,wght@0,100..900;1,100..900&family=Merienda:wght@300..900&display=swap"
     rel="stylesheet">
   <!---------------------------------------------------->
+
+
 
   <!------SCHE------>
   <script type="application/ld+json">
@@ -1128,24 +1131,42 @@
           <h3 class="status">Loading...</h3>
         </div>
       </article>
-     
-<!--EXTRA-->
-    <article class="custom" data-page="custom">
+
+      <!-- Dynamic data ke liye added by max -->
+      <article class="1" data-page="1">
         <header>
           <h2 id="customTitle" class="h2 article-title"></h2>
-        </header>
+          <section class="about-text">
+            <div id="contentArea" class="content">
+              <!-- MAXING... -->
+            </div>
+          </section>
       </article>
-      
+
+      <article class="2" data-page="2">
+        <header>
+          <h2 id="customTitle" class="h2 article-title">Make yours..!</h2>
+          <section class="about-text">
+            <div class="input-wrapper">
+            <input id="pageTitle" type="text" name="title" class="form-input" value="Hi, There!" placeholder="Enter title of page..." required data-form-input>
+          </div>
+            <textarea type="code" class="form-input" id="htmlInput" placeholder="Write your html OR plain text...!"></textarea>
+            <textarea type="code" class="form-input" id="output" placeholder="The output will show here." readonly></textarea>
+            <button style="display: none;" class="form-btn" type="submit" id="preview">Preview</button><br>
+            <button style="display: none;" class="form-btn" type="submit" id="share">Copy & Share</button>
+            <button class="form-btn" type="submit" id="cook">Cook the link!</button>
+          </section>
+      </article>
+
     </div>
   </main>
-  <!--Main JS -->
+  <!--JS . JAVA KI SAALI JI -->
+  <script src="./assets/js/menu.js"></script>
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/testimonials.js"></script>
-  <script src="./assets/js/menu.js"></script>
   <script src="./assets/js/dynamicContentLoader.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
-  
 </body>
 
 </html>
