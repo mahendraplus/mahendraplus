@@ -32,10 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 if (u) {
   document.getElementById('errorPath').innerHTML = u;
-  alert(u);
 }
-
-  
   //Make yours!! Decryption -max -id45695 SE.key M$X142@1324
   if (h) {
     try {
