@@ -102,9 +102,8 @@
         href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Exo:ital,wght@0,100..900;1,100..900&family=Merienda:wght@300..900&display=swap"
         rel="stylesheet">
     <style>
-
         :root {
-            --body-bg-gradient: rgb(7, 16, 32);
+            --body-bg-gradient: rgb(228, 234, 243);
             --font-color-1: #3586ff;
             --box-shadow-1: 0px -7px 7px 0px hsla(236, 11%, 50%, 0.103);
             --card: var(--body-bg-gradient);
@@ -123,30 +122,27 @@
 
         footer {
             position: relative;
-            width: 100%;
-            padding: 20px 50px;
-            background: #3586ff;
+            background: transparent;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            margin-top: 100px;
             position: fixed;
             bottom: 0;
-            left: 0;
             width: 100%;
-            padding: 5px;
             box-sizing: border-box;
+
         }
 
         footer .wave {
             position: absolute;
-            top: -100px;
+            bottom: 0;
             left: 0;
             width: 100%;
             height: 100px;
             background: url(wave.png);
             background-size: 1000px 100px;
+
         }
 
         footer .wave#wave1 {
@@ -229,15 +225,20 @@
         }
 
         .menu li a {
-            font-size: 1.2em;
+            font-size: 20px;
             color: var(--font-color-1);
-            opacity: 0.75;
-            margin: 0 15px;
+            opacity: 1;
+            margin: 0 0px;
             text-decoration: none;
-            display: inline-block;
+            display: inlin-block;
             padding: 5px 20px 5px 20px;
             border-radius: 30px;
             background-color: var(--body-bg-gradient);
+            z-index: 1000;
+            position: relative;
+            bottom: 10px;
+            right: 20px;
+
         }
 
         .menu li a:hover {
@@ -260,9 +261,9 @@
         }
 
         .header-title h1 {
-            animation: flip-animation 2s infinite;
-            font-size: clamp(1.5rem, 4vw, 3rem);
+            font-size: 100px;
             margin: 0 auto;
+            opacity: 1;
         }
 
 
@@ -276,6 +277,7 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             padding: 30px;
+            margin-bottom: 100px;
         }
 
         .site-card {
@@ -285,6 +287,7 @@
             overflow: hidden;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: solid 1px rgba(0, 0, 0, 0.404);
         }
 
         .site-card:hover {
@@ -293,9 +296,9 @@
         }
 
         .site-title {
-            font-size: clamp(1rem, 2vw, 1.5rem);
-            font-weight: bold;
+            font-size: 20px;
             margin: 15px 0;
+
         }
 
         .iframe-wrapper {
@@ -303,6 +306,7 @@
             width: 100%;
             height: 180px;
             overflow: hidden;
+
         }
 
         iframe {
@@ -312,7 +316,8 @@
             top: 0;
             left: 0;
             pointer-events: none;
-            opacity: 0.3;
+            opacity: 1;
+
         }
 
         .iframe-overlay {
@@ -321,13 +326,15 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(99, 109, 138, 0.733);
+            background: rgba(64, 93, 179, 0.301);
             display: flex;
             flex-direction: row;
             /* Arrange buttons in a row */
             align-items: center;
             justify-content: center;
             gap: 10px;
+            backdrop-filter: blur(5px);
+
             /* Add spacing between buttons */
         }
 
@@ -340,13 +347,12 @@
             cursor: pointer;
             color: var(--font-color-1);
             transition: 0.3s ease;
-            border: outset rgba(255, 255, 255, 0.582) 2px;
+            border: solid 1px rgba(0, 0, 0, 0.404);
 
         }
 
         .toggle-button:hover {
-            transform: scale(1.05);
-            color: rgb(255, 255, 255);
+            transform: scale(1.09);
         }
 
 
@@ -354,14 +360,53 @@
             .iframe-wrapper {
                 height: 150px;
             }
+
+            .menu li a {
+                font-size: 12px;
+                color: var(--font-color-1);
+                opacity: 1;
+                margin: 0 0px;
+                text-decoration: none;
+                display: inline-block;
+                padding: 5px 20px 5px 20px;
+                border-radius: 30px;
+                background-color: var(--body-bg-gradient);
+            }
+
+            .header-title h1 {
+                animation: flip-animation 2s infinite;
+                font-size: 60px;
+                margin: 0 auto;
+            }
+
         }
 
         .line1 {
             background-color: var(--font-color-1);
             border: none;
-            width: 50%;
-            height: 3px;
+            width: 40%;
+            height: 2px;
             border-radius: 100%;
+        }
+
+        /* Styling for the title div */
+        .title-div {
+            background-color: #3586ff18;
+            /* Transparent blue background */
+            width: auto 0;
+            /* Full width of the container */
+            display: flex;
+            /* Use flexbox to align items */
+            flex-direction: column;
+            /* Stack elements vertically */
+            align-items: flex-start;
+            /* Align the items to the left */
+            border-radius: 20px;
+            margin-left: 30px;
+            margin-right: 30px;
+            border: solid 0px rgba(0, 0, 0, 0.404);
+            padding-left: 20px;
+            padding-right: 20px;
         }
     </style>
 </head>
@@ -375,6 +420,9 @@
         </div>
 
     </header>
+    <div class="title-div">
+        <h2>Deployed Pages:</h2>
+    </div>
     <div class="container"></div>
 
     <footer>
@@ -388,7 +436,7 @@
 
         </ul>
         <ul class="menu">
-            <li> <a href="https://mahendraplus.github.io" target="_blank">&copy; mahendraplus.github.io | 2024-25 
+            <li> <a href="https://mahendraplus.github.io" target="_blank">&copy; mahendraplus.github.io | 2024-25
                 </a></li>
         </ul>
     </footer>
@@ -413,7 +461,7 @@
             // Copy Link Button
             const copyButton = document.createElement('button');
             copyButton.classList.add('toggle-button');
-            copyButton.innerText = "Copy Link";
+            copyButton.innerText = "Copy";
             copyButton.onclick = async () => {
                 try {
                     await navigator.clipboard.writeText(siteUrl);
@@ -458,7 +506,7 @@
                 }
             };
 
-            return [openButton, copyButton, shareButton];
+            return [copyButton, openButton, shareButton];
         };
 
         // Fetch folders and dynamically populate the site cards
