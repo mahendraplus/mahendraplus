@@ -212,29 +212,7 @@
             color: rgb(255, 255, 255);
         }
 
-        footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgb(63, 72, 112);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 5px;
-            box-sizing: border-box;
-            
-        }
-        footer div{
-            border: none;
-            color: white;
-            font-size: 10px;
-            padding: 5px 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
+       
         @media (max-width: 600px) {
             .iframe-wrapper {
                 height: 150px;
@@ -247,6 +225,146 @@
           height: 3px;
           border-radius: 100%;
         }
+
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100vh;
+    background: #333;
+}
+footer
+{
+    position: relative;
+    width: 100%;
+    padding: 20px 50px;
+    background: #3586ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+footer .wave
+{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(https://assets.codepen.io/7773162/wave.png);
+    background-size: 1000px 100px;
+}
+footer .wave#wave1
+{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animate 4s linear infinite;
+}
+footer .wave#wave2
+{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate2 4s linear infinite;
+}
+footer .wave#wave3
+{
+    z-index: 998;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animate 3s linear infinite;
+}
+footer .wave#wave4
+{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate2 3s linear infinite;
+}
+
+@keyframes animate
+{
+    0%,100%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+@keyframes animate2
+{
+    0%,100%
+    {
+        background-position-x: 0px;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+.social,
+.menu
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+.social li,
+.menu li
+{
+    list-style: none;
+}
+.social li a 
+{
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+.social li a:hover 
+{
+    transform: translateY(-10px);
+}
+
+.menu li a 
+{
+    font-size: 1.2em;
+    color: #fff;
+    opacity: 0.75;
+    margin: 0 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+.menu li a:hover 
+{
+    opacity: 1;
+}
+footer p 
+{
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+ 
+        
     </style>
 </head>
 <body>
@@ -258,10 +376,24 @@
         
     </header>
     <div class="container"></div>
-    <footer><div>
-        &copy; 2024-25 <a href="https://mahendraplus.github.io" target="_blank" style="color: white; text-decoration: none;">mahendraplus.github.io</a> | Mahendra Mali 
+
+    	<footer>
+		<div class="waves">
+			<div class="wave" id="wave1"></div>
+			<div class="wave" id="wave2"></div>
+			<div class="wave" id="wave3"></div>
+			<div class="wave" id="wave4"></div>
+		</div>
+		<ul class="social">
+		
+		</ul>
+		<ul class="menu">
+			<li> <a href="https://mahendraplus.github.io" target="_blank" style="color: black; text-decoration: none;">&copy; 2024-25 mahendraplus.github.io | Mahendra Mali  </a></li>
+		</ul>
+	</footer>
+
     </div>
-    </footer>
+   
     <script>
       const repoOwner = "mahendraplus";
 const repoName = "mahendraplus.github.io";
