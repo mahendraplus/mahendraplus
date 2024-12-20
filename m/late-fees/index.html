@@ -4,40 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application for Late Fees</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
             line-height: 1.6;
-            margin: 20px;
+            font-size: 14px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         .header {
-            text-align: right;
-        }
-        .content {
-            margin-top: 20px;
-        }
-        .footer {
-            margin-top: 40px;
-        }
-        .signatures {
-            margin-top: 50px;
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
         }
-        .signature {
+        .header img {
+            height: 50px;
+        }
+        .content, .footer, .signatures, .attachment {
+            margin-bottom: 20px;
+        }
+        .signatures {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .signature-box {
             text-align: center;
+            flex: 1;
         }
-        .signature-line {
+        .signature-box span {
             display: block;
-            width: 200px;
-            border-top: 1px solid #000;
-            margin-top: 10px;
+            margin: 20px auto 10px auto;
+            width: 70%;
+            height: 50px;
+            border-bottom: 2px dashed #333;
+            background-color: transparent;
+        }
+        .attachment {
+            font-size: 1rem;
+        }
+        .attachment a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .attachment i {
+            margin-right: 8px;
+            color: #007BFF;
+        }
+        .attachment a:hover {
+            text-decoration: underline;
+        }
+        .print-button {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+        .print-button button {
+            background-color: #007BFF;
+            color: white;
+            font-size: 14px;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .print-button button:hover {
+            background-color: #0056b3;
+        }
+        @media print {
+            .print-button, .attachment {
+                display: none;
+            }
+            body {
+                background-color: white;
+                padding: 0;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .signatures {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .signature-box {
+                width: 100%;
+            }
+            .print-button {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div>
+    <div class="container">
         <div class="header">
+            <img src="https://spu.ac.in/wp-content/uploads/2024/05/Logo_220x80.png" alt="SPU Logo">
             <p>Date: 20th December 2024</p>
         </div>
         <div class="content">
@@ -61,14 +140,20 @@
             Roll No: 14</p>
         </div>
         <div class="signatures">
-            <div class="signature">
-                <span class="signature-line"></span>
+            <div class="signature-box">
+                <span></span>
                 <p>Student's Signature</p>
             </div>
-            <div class="signature">
-                <span class="signature-line"></span>
+            <div class="signature-box">
+                <span></span>
                 <p>Principal's Signature</p>
             </div>
+        </div>
+        <div class="attachment">
+            <p><i class="fas fa-file-pdf"></i><a href="https://mahendraplus.github.io/m/late-fees/1.pdf" target="_blank">  Attached Document</a></p>
+        </div>
+        <div class="print-button">
+            <button onclick="window.print()">Print Application</button>
         </div>
     </div>
 </body>
